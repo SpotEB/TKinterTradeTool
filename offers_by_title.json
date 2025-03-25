@@ -1,0 +1,210 @@
+[
+    {
+        "market": "dm",
+        "price": 2.5,
+        "float_value": 0.11350145190954208,
+        "stickers": [
+            "hades | Paris 2023",
+            "9INE | Paris 2023",
+            "hades | Paris 2023",
+            "9INE | Paris 2023"
+        ],
+        "trade_lock": 71823
+    },
+    {
+        "market": "dm",
+        "price": 12.0,
+        "float_value": 0.10652794688940048,
+        "stickers": [
+            "NEO | Boston 2018",
+            "TaZ | Boston 2018",
+            "G2 Esports (Holo) | Boston 2018",
+            "pashaBiceps | Boston 2018"
+        ],
+        "trade_lock": 0
+    },
+    {
+        "market": "dm",
+        "price": 4.44,
+        "float_value": 0.08707701414823532,
+        "stickers": [
+            "The Awper",
+            "Ivette",
+            "Team EnVyUs | Boston 2018",
+            "SIXER | Boston 2018"
+        ],
+        "trade_lock": 0
+    },
+    {
+        "market": "dm",
+        "price": 60.0,
+        "float_value": 0.12294399738311768,
+        "stickers": [
+            "Blue Lethal",
+            "Team Liquid (Glitter) | Paris 2023",
+            "Team Liquid (Glitter) | Paris 2023",
+            "Liquid Fire (Holo)"
+        ],
+        "trade_lock": 0
+    },
+    {
+        "market": "dm",
+        "price": 2.25,
+        "float_value": 0.09114648401737213,
+        "stickers": [
+            "forZe eSports | Paris 2023",
+            "Team Liquid | Paris 2023",
+            "FaNg (Holo) | Antwerp 2022",
+            "Ninjas in Pyjamas | Paris 2023"
+        ],
+        "trade_lock": 0
+    },
+    {
+        "market": "dm",
+        "price": 5.19,
+        "float_value": 0.07652010768651962,
+        "stickers": [],
+        "trade_lock": 619964
+    },
+    {
+        "market": "dm",
+        "price": 2.06,
+        "float_value": 0.10978613048791885,
+        "stickers": [],
+        "trade_lock": 0
+    },
+    {
+        "market": "dm",
+        "price": 7.0,
+        "float_value": 0.10415194183588028,
+        "stickers": [
+            "Virtus.Pro | Atlanta 2017",
+            "FaZe Clan | Atlanta 2017",
+            "s1mple | Atlanta 2017",
+            "Astralis | Atlanta 2017"
+        ],
+        "trade_lock": 0
+    },
+    {
+        "market": "dm",
+        "price": 2.78,
+        "float_value": 0.1357397884130478,
+        "stickers": [],
+        "trade_lock": 0
+    },
+    {
+        "market": "dm",
+        "price": 3.99,
+        "float_value": 0.10025785118341446,
+        "stickers": [
+            "boltz (Foil) | Krakow 2017",
+            "kNgV- (Foil) | Krakow 2017",
+            "Monte | Paris 2023",
+            "Monte | Paris 2023",
+            "Monte | Paris 2023"
+        ],
+        "trade_lock": 0
+    },
+    {
+        "market": "dm",
+        "price": 6.38,
+        "float_value": 0.09246102720499039,
+        "stickers": [
+            "Bad News Eagles | Rio 2022",
+            "G2 Esports | Boston 2018",
+            "SK Gaming | Boston 2018"
+        ],
+        "trade_lock": 0
+    },
+    {
+        "market": "dm",
+        "price": 5.92,
+        "float_value": 0.09689514338970184,
+        "stickers": [
+            "Natus Vincere | 2020 RMR",
+            "Spirit | 2020 RMR",
+            "Evil Geniuses (Holo) | 2020 RMR"
+        ],
+        "trade_lock": 0
+    },
+    {
+        "market": "dm",
+        "price": 10.0,
+        "float_value": 0.0955376997590065,
+        "stickers": [],
+        "trade_lock": 0
+    },
+    {
+        "market": "dm",
+        "price": 24.0,
+        "float_value": 0.07811190187931061,
+        "stickers": [],
+        "trade_lock": 0
+    },
+    {
+        "market": "dm",
+        "price": 6.08,
+        "float_value": 0.11114354431629181,
+        "stickers": [
+            "Natus Vincere | Atlanta 2017",
+            "FaZe Clan | Cologne 2016",
+            "OpTic Gaming | Cologne 2016",
+            "SK Gaming | Cologne 2016"
+        ],
+        "trade_lock": 0
+    },
+    {
+        "market": "dm",
+        "price": 31.7,
+        "float_value": 0.09505752474069595,
+        "stickers": [
+            "Flipsid3 Tactics | Atlanta 2017",
+            "Flipsid3 Tactics (Holo) | Cologne 2016",
+            "G2 Esports (Holo) | Paris 2023",
+            "Flipsid3 Tactics (Holo) | Cologne 2016"
+        ],
+        "trade_lock": 0
+    },
+    {
+        "market": "dm",
+        "price": 31.4,
+        "float_value": 0.08797160536050797,
+        "stickers": [
+            "apEX (Foil) | Krakow 2017",
+            "keev (Foil) | Krakow 2017",
+            "LEGIJA (Foil) | Krakow 2017",
+            "apEX (Foil) | Boston 2018"
+        ],
+        "trade_lock": 0
+    },
+    {
+        "market": "dm",
+        "price": 2.5,
+        "float_value": 0.13666792213916779,
+        "stickers": [
+            "forZe eSports | Paris 2023",
+            "apEX | Copenhagen 2024",
+            "Ninjas in Pyjamas (Glitter) | Paris 2023",
+            "FURIA | Paris 2023",
+            "G2 Esports | Paris 2023"
+        ],
+        "trade_lock": 341522
+    },
+    {
+        "market": "dm",
+        "price": 3.0,
+        "float_value": 0.07777979224920273,
+        "stickers": [],
+        "trade_lock": 0
+    },
+    {
+        "market": "dm",
+        "price": 19.5,
+        "float_value": 0.10688600689172745,
+        "stickers": [
+            "FalleN | Krakow 2017",
+            "FalleN (Foil) | Cologne 2015"
+        ],
+        "trade_lock": 0
+    }
+]
