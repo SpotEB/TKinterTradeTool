@@ -574,32 +574,3 @@ def get_user_offers(
     return response.json()
 
 
-
-
-
-
-# export_json_to_file(user_inventory(), "inventory.json")
-# # response = get_user_offers(
-# #     game_id="a8db",
-# #     sort_type="UserOffersSortTypeDateNewestFirst",
-# #     limit=1000
-# # )
-# print(get_user_offers())
-
-# last_sales = get_last_sales(title="AK-47 | Redline (Field-Tested)")
-# print(last_sales)
-# export_json_to_file(last_sales, "last_sales.json")
-
-# export_json_to_file(response, "user_offers.json")
-# # export_json_to_file(offers_by_title("M4A4 | Turbine (Minimal Wear)"), "offers_by_title.json")
-
-# export_list = []
-# for offer in offers_by_title("AWP | Phobos (Minimal Wear)"):
-#     offer = listing_convert_universal_dm(offer)
-#     export_list.append(offer)
-
-# export_json_to_file(export_list, "offers_by_title.json")
-
-# export_json_to_file(get_aggregated_prices(["AWP | Phobos (Minimal Wear)"]))
-
-# export_json_to_file(get_last_sales("Dual Berettas | Hydro Strike (Factory New)"), "last_sales_sample.json")

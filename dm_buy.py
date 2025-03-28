@@ -3,6 +3,8 @@ from datetime import datetime
 from nacl.signing import SigningKey
 from nacl.bindings import crypto_sign
 import requests
+from keys import public_key, secret_key
+
 
 def export_json_to_file(data, filename):
     with open(filename, 'w') as f:
@@ -11,9 +13,6 @@ def export_json_to_file(data, filename):
 
 
 
-# replace with your api keys
-secret_key = "693e56289b71bfdeaab7786e5424fdfa09b90f48c3ce0dc509298d23cc61305a7b7bc834646ff0d47c601a0581e3efc8fb526a06d57a1a1c09881ea511f35aab"
-public_key = "7b7bc834646ff0d47c601a0581e3efc8fb526a06d57a1a1c09881ea511f35aab"
 
 # change url to prod
 rootApiUrl = "https://api.dmarket.com"
@@ -318,3 +317,4 @@ def edit_offers(items):
         raise Exception(f"Request failed: {response.status_code} {response.text}")
 
     return response.json()
+

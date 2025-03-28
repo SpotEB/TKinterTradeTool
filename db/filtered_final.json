@@ -1286,20 +1286,6 @@
         "is_listed": false
     },
     {
-        "asset_id_dm": "6292217065:6216486244:42479320838:730",
-        "asset_id_csf": "42479320838",
-        "def_index": 1355,
-        "paint_index": 0,
-        "float_value": 0,
-        "is_stattrak": false,
-        "is_souvenir": false,
-        "keychain": "",
-        "market_hash_name": "Charm | Diamond Dog",
-        "stickers": [],
-        "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXI5BVcJos7pwgSQUXDVO2j0MPaXVY7Lgdou7O2OA5u1P_BfzZ9_927q4SClvr7Pb-fkzNQ7JElj7vHooqm3AGxqRBqMGHzcIGWJw5qM13Z8lS9w-m-jJG-u4OJlyVokOEzYA",
-        "is_listed": false
-    },
-    {
         "asset_id_dm": "6276644394:2735411010:42461951693:730",
         "asset_id_csf": "42461951693",
         "def_index": 4,
@@ -1510,6 +1496,20 @@
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhjxszFJTwW09Kzm7-FmP7mDLbUkmJE5Yt02L7Crd6ljFfhqkRpNmj0IoHGJg48NFHQ-APrk-fmgJS47ZqaznEwpGB8snTjxNBG",
+        "is_listed": false
+    },
+    {
+        "asset_id_dm": "6279294276:6216350126:42461941256:730",
+        "asset_id_csf": "42461941256",
+        "def_index": 1355,
+        "paint_index": 0,
+        "float_value": 0,
+        "is_stattrak": false,
+        "is_souvenir": false,
+        "keychain": "",
+        "market_hash_name": "Charm | Hot Hands",
+        "stickers": [],
+        "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXI5BVcJos7pwgSW0nRV-uj6J6cWF5LMhRZia6gKF5f3vLPfDwMvo-1zIHZlqHwYuKHxz9UvJx3jLnEo9_30Qy2rhFqa27zItCQcAFsMEaQpAb0Heri0w",
         "is_listed": false
     },
     {
@@ -2043,20 +2043,6 @@
         "is_listed": false
     },
     {
-        "asset_id_dm": "6281038377:6216540811:42461923950:730",
-        "asset_id_csf": "42461923950",
-        "def_index": 1355,
-        "paint_index": 0,
-        "float_value": 0,
-        "is_stattrak": false,
-        "is_souvenir": false,
-        "keychain": "",
-        "market_hash_name": "Charm | Hot Wurst",
-        "stickers": [],
-        "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXI5BVcJos7pwgSQUXDVO2j0MPaXVY7Lgdou7O2OA5u1P_BfzZ9-8mkh5TFlKanZr6CkmoGupVy27uR8Imm0FGw-0BvNmulcdScJw9vNFiDrAfqkPCv28G2cNl4_Q",
-        "is_listed": false
-    },
-    {
         "asset_id_dm": "6853023739:469444874:42461923949:730",
         "asset_id_csf": "42461923949",
         "def_index": 61,
@@ -2077,20 +2063,6 @@
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo6m1FBRp3_bGcjhQ09-jq5WYh8jnI7LFkGJD7fp9g-7J4cL23lexqhI9ZT3wd4WTJ1VvZ1rZr1G2wu2805W46p6amnJj6SEmt3_YgVXp1sALRvj2",
-        "is_listed": false
-    },
-    {
-        "asset_id_dm": "6277044741:6216486244:42461923243:730",
-        "asset_id_csf": "42461923243",
-        "def_index": 1355,
-        "paint_index": 0,
-        "float_value": 0,
-        "is_stattrak": false,
-        "is_souvenir": false,
-        "keychain": "",
-        "market_hash_name": "Charm | Diamond Dog",
-        "stickers": [],
-        "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXI5BVcJos7pwgSQUXDVO2j0MPaXVY7Lgdou7O2OA5u1P_BfzZ9_927q4SClvr7Pb-fkzNQ7JElj7vHooqm3AGxqRBqMGHzcIGWJw5qM13Z8lS9w-m-jJG-u4OJlyVokOEzYA",
         "is_listed": false
     },
     {
@@ -5836,6 +5808,20 @@
         "is_listed": false
     },
     {
+        "asset_id_dm": "6290184470:6216350126:42264469777:730",
+        "asset_id_csf": "42264469777",
+        "def_index": 1355,
+        "paint_index": 0,
+        "float_value": 0,
+        "is_stattrak": false,
+        "is_souvenir": false,
+        "keychain": "",
+        "market_hash_name": "Charm | Hot Hands",
+        "stickers": [],
+        "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXI5BVcJos7pwgSW0nRV-uj6J6cWF5LMhRZia6gKF5f3vLPfDwMvo-1zIHZlqHwYuKHxz9UvJx3jLnEo9_30Qy2rhFqa27zItCQcAFsMEaQpAb0Heri0w",
+        "is_listed": false
+    },
+    {
         "asset_id_dm": "6792933126:4726718917:42264466636:730",
         "asset_id_csf": "42264466636",
         "def_index": 60,
@@ -6173,6 +6159,20 @@
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposr-kLAtl7PDdTjlH_9mkgL-OlvD4NoTSmXlD58F0hNbN_Iv9nBri-BJoMm_7cIWXcAU2Zl7X_FXskLvvgpa4v5nNnSY1vnYq4ymJyUPkn1gSOSCcmzDg",
+        "is_listed": false
+    },
+    {
+        "asset_id_dm": "6277239266:6216350126:42264414409:730",
+        "asset_id_csf": "42264414409",
+        "def_index": 1355,
+        "paint_index": 0,
+        "float_value": 0,
+        "is_stattrak": false,
+        "is_souvenir": false,
+        "keychain": "",
+        "market_hash_name": "Charm | Hot Hands",
+        "stickers": [],
+        "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXI5BVcJos7pwgSW0nRV-uj6J6cWF5LMhRZia6gKF5f3vLPfDwMvo-1zIHZlqHwYuKHxz9UvJx3jLnEo9_30Qy2rhFqa27zItCQcAFsMEaQpAb0Heri0w",
         "is_listed": false
     },
     {
@@ -7038,6 +7038,20 @@
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpotLO_JAlf0Ob3czRY49KJh5CKlPL3Mq_um25V4dB8xL6RoYrz0FHi-0s6YWClJNORIVJraFzY81S6ku7q05fp7p3Pmndn6Sc8pSGKPYD9-PQ",
+        "is_listed": false
+    },
+    {
+        "asset_id_dm": "6279284663:6216350126:42264313164:730",
+        "asset_id_csf": "42264313164",
+        "def_index": 1355,
+        "paint_index": 0,
+        "float_value": 0,
+        "is_stattrak": false,
+        "is_souvenir": false,
+        "keychain": "",
+        "market_hash_name": "Charm | Hot Hands",
+        "stickers": [],
+        "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXI5BVcJos7pwgSW0nRV-uj6J6cWF5LMhRZia6gKF5f3vLPfDwMvo-1zIHZlqHwYuKHxz9UvJx3jLnEo9_30Qy2rhFqa27zItCQcAFsMEaQpAb0Heri0w",
         "is_listed": false
     },
     {
@@ -8948,17 +8962,17 @@
         "is_listed": false
     },
     {
-        "asset_id_dm": "6286978503:6216350378:41640674674:730",
-        "asset_id_csf": "41640674674",
+        "asset_id_dm": "6277555578:6216486244:41640656628:730",
+        "asset_id_csf": "41640656628",
         "def_index": 1355,
         "paint_index": 0,
         "float_value": 0,
         "is_stattrak": false,
         "is_souvenir": false,
         "keychain": "",
-        "market_hash_name": "Charm | Baby Karat CT",
+        "market_hash_name": "Charm | Diamond Dog",
         "stickers": [],
-        "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXI5BVcJos7pwgSW0nRV-uj6J6cWF5LMhRZibmxIAlp1fb3djJO6JLnktOPkfagYb-BkjoIvZEiiLjFpNSk2Ffl_hY6YTv7IYGXJg9qYVjZ5BHglgjcAo2m",
+        "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXI5BVcJos7pwgSQUXDVO2j0MPaXVY7Lgdou7O2OA5u1P_BfzZ9_927q4SClvr7Pb-fkzNQ7JElj7vHooqm3AGxqRBqMGHzcIGWJw5qM13Z8lS9w-m-jJG-u4OJlyVokOEzYA",
         "is_listed": false
     },
     {
@@ -11248,20 +11262,6 @@
         "is_listed": false
     },
     {
-        "asset_id_dm": "6291443789:6216486244:41341840926:730",
-        "asset_id_csf": "41341840926",
-        "def_index": 1355,
-        "paint_index": 0,
-        "float_value": 0,
-        "is_stattrak": false,
-        "is_souvenir": false,
-        "keychain": "",
-        "market_hash_name": "Charm | Diamond Dog",
-        "stickers": [],
-        "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXI5BVcJos7pwgSQUXDVO2j0MPaXVY7Lgdou7O2OA5u1P_BfzZ9_927q4SClvr7Pb-fkzNQ7JElj7vHooqm3AGxqRBqMGHzcIGWJw5qM13Z8lS9w-m-jJG-u4OJlyVokOEzYA",
-        "is_listed": false
-    },
-    {
         "asset_id_dm": "6277816146:2735432289:41320334239:730",
         "asset_id_csf": "41320334239",
         "def_index": 61,
@@ -11479,20 +11479,6 @@
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposLuoKhRf0Ob3dzxP7c-JmIWFg_bLPr7Vn35cpsQpievF9N6j2QflrUBtam-iI4WUcQ5vYAmG-Afskuq9h5e-upicwSN9-n51BX7ypOQ",
-        "is_listed": false
-    },
-    {
-        "asset_id_dm": "6280738543:6216554000:40994955542:730",
-        "asset_id_csf": "40994955542",
-        "def_index": 1355,
-        "paint_index": 0,
-        "float_value": 0,
-        "is_stattrak": false,
-        "is_souvenir": false,
-        "keychain": "",
-        "market_hash_name": "Charm | Semi-Precious",
-        "stickers": [],
-        "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXI5BVcJos7pwgSW0nRV-uj6J6cWF5LMhRZia6uJQ5m1szLYyRR-N262tPTxvSka-mFwj1SsJcj2bmYpI32igzs-UE9Y2jzLIDGc1Q7Zg2ErlaggbC4q4_SvSA",
         "is_listed": false
     },
     {
@@ -11874,6 +11860,29 @@
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXA6Q1NL4kmrAlOA0_FVPCi2t_fUkRxNztUoreaLQVp7OXJYzRD4si02tHSlKatNe-GxzoB68cgiezCrYnwjFbs-hE6amjwIYKSdlM2YV6E_1WggbC4kdowLd4",
+        "is_listed": false
+    },
+    {
+        "asset_id_dm": "6300855069:4578724107:39525367880:730",
+        "asset_id_csf": "39525367880",
+        "def_index": 4773,
+        "paint_index": 0,
+        "float_value": 0,
+        "is_stattrak": false,
+        "is_souvenir": false,
+        "keychain": "",
+        "market_hash_name": "Elite Trapper Solman | Guerrilla Warfare",
+        "stickers": [
+            {
+                "name": "Patch | Shattered Web",
+                "price": 43
+            },
+            {
+                "name": "Patch | Bravo",
+                "price": 24
+            }
+        ],
+        "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXA6Q1NL4kmrAlOA0_FVPCi2t_fUkRxNztDu4WvPgln3_b3YzxL6Nmkq5aKhf71Pa_Q2G1QsZIpj7-T8d_2iQfj-Us4Y2_2doGdcwc7N1DSqVDswuvuhMXtv8_XiSw06f3P4u4",
         "is_listed": false
     },
     {
