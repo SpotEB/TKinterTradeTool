@@ -6,7 +6,7 @@ def extract_sticker_names(value):
     return re.findall(r'name:([^ ]+)', value)
 
 def convert_title_def_index(title):
-    with open("Dmarket/def_index.json", "r") as f:
+    with open("dMarketTools/def_index.json", "r") as f:
         def_indexes = json.load(f)
 
     # Normalize title: lowercase and remove skin/wear details
