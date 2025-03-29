@@ -43,6 +43,7 @@ tabview.pack(padx=5, pady=5)
 
 tabview.add("Sell")  # add tab at the end
 tabview.add("Buy")  # add tab at the end
+tabview.add("Listings")
 tabview.set("Sell")  # set currently visible tab
 
 def search_items(event=None):
