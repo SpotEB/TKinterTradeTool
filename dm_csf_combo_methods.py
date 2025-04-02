@@ -1,5 +1,5 @@
-from csf_methods import get_inventory as user_inventory_csf, item_convert_universal_csf
-from dm_main import user_inventory as user_inventory_dm
+from csf_methods import get_inventory as user_inventory_csf, item_convert_universal_csf, get_user_stall as user_listings_csf
+from dm_main import user_inventory as user_inventory_dm, get_user_offers as user_listings_dm
 from dm_methods import item_convert_universal_dm
 import json
 
@@ -54,3 +54,6 @@ def filtered_inventory():
 
     json.dump(filtered_final, open("TKinterTradeTool/db/filtered_final.json", "w"), indent=4)
     return filtered_final
+
+def filtered_listings():
+    return

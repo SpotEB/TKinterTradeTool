@@ -8,7 +8,7 @@ from dm_main import get_last_sales as last_sales_dm, offers_by_title as offers_b
 from dm_methods import sales_convert_universal_dm
 from csf_methods import last_sales_csf, sales_convert_universal_csf, search_skin, search_commodity, listing_convert_universal_csf, csf_list_item
 from datetime import datetime, timezone
-from dm_csf_combo_methods import filtered_inventory
+from dm_csf_combo_methods import filtered_inventory, filtered_listings
 
 
 
@@ -26,6 +26,7 @@ def reduced_fees_load():
 inventory = filtered_inventory()
 inventory = sorted(inventory, key=lambda x: x["market_hash_name"])
 
+user_listings = filtered_listings()
 
 empty_img = ctk.CTkImage(light_image=Image.new("RGBA", (1, 1)), size=(1, 1))
 
