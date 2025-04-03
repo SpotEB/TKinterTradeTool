@@ -47,12 +47,12 @@ tabview.add("Buy")  # add tab at the end
 tabview.add("Listings")
 tabview.set("Sell")  # set currently visible tab
 
-def search_items(event=None):
-    if search_entry.get() == "":
+def search_items_sell(event=None):
+    if search_entry_sell.get() == "":
         item_gen_button(inventory)
         return
 
-    search_term = search_entry.get().lower()
+    search_term = search_entry_sell.get().lower()
     filtered_inventory = [item for item in inventory if search_term in item["market_hash_name"].lower()]
     clear_tab(scroll_frame_sell)
     item_gen_button(filtered_inventory)
@@ -60,17 +60,24 @@ def search_items(event=None):
 
 
 # Search Entry
-search_entry = ctk.CTkEntry(tabview.tab("Sell"), width=400, placeholder_text="Search for an item...")
-search_entry.grid(row=0, column=0, padx=(10, 0), pady=10, sticky="ew")
+search_entry_sell = ctk.CTkEntry(tabview.tab("Sell"), width=400, placeholder_text="Search for an item...")
+search_entry_sell.grid(row=0, column=0, padx=(10, 0), pady=10, sticky="ew")
+
+search_entry_listings = ctk.CTkEntry(tabview.tab("Listings"), width=400, placeholder_text="Search for an item...")
+search_entry_listings.grid(row=0, column=0, padx=(10, 0), pady=10, sticky="ew")
 
 # Search Button
-search_button = ctk.CTkButton(tabview.tab("Sell"), text="Search", width=100, command=search_items)
-search_button.grid(row=0, column=1, padx=(0, 10), pady=10)
-search_entry.bind("<Return>", search_items)  # Bind the Enter key to the search_items function
+search_button_sell = ctk.CTkButton(tabview.tab("Sell"), text="Search", width=100, command=search_items_sell)
+search_button_sell.grid(row=0, column=1, padx=(0, 10), pady=10)
+search_entry_sell.bind("<Return>", search_items_sell)  # Bind the Enter key to the search_items function
 
+search_button_listings = ctk.CTkButton(tabview.tab("Listings"), text="Search", width=100, command=search_items_sell)
+search_button_listings.grid(row=0, column=1, padx=(0, 10), pady=10)
+search_entry_listings.bind("<Return>", search_items_sell)  # Bind the Enter key to the search_items function
 
 # Configure grid to allow entry to expand
 tabview.tab("Sell").grid_columnconfigure(0, weight=1)
+tabview.tab("Listings").grid_columnconfigure(0, weight=1)
 
 
 
