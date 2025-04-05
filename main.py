@@ -8,7 +8,7 @@ from dm_main import get_last_sales as last_sales_dm, offers_by_title as offers_b
 from dm_methods import sales_convert_universal_dm
 from csf_methods import last_sales_csf, sales_convert_universal_csf, search_skin, search_commodity, listing_convert_universal_csf, csf_list_item
 from datetime import datetime, timezone
-from dm_csf_combo_methods import filtered_inventory, filtered_listings
+from dm_csf_combo_methods import filtered_inventory, all_listings_universal as filtered_listings
 
 
 
@@ -47,15 +47,17 @@ tabview.add("Buy")  # add tab at the end
 tabview.add("Listings")
 tabview.set("Sell")  # set currently visible tab
 
+tab_listings_loaded = False
+
 def search_items_sell(event=None):
     if search_entry_sell.get() == "":
-        item_gen_button(inventory)
+        item_gen_button_sell(inventory)
         return
 
     search_term = search_entry_sell.get().lower()
     filtered_inventory = [item for item in inventory if search_term in item["market_hash_name"].lower()]
     clear_tab(scroll_frame_sell)
-    item_gen_button(filtered_inventory)
+    item_gen_button_sell(filtered_inventory)
     
 
 
@@ -84,12 +86,12 @@ tabview.tab("Listings").grid_columnconfigure(0, weight=1)
 scroll_frame_sell = ctk.CTkScrollableFrame(tabview.tab("Sell"), width=950, height=900)
 scroll_frame_sell.grid(row=2, column=0, padx=20, pady=20)
 
+scroll_frame_listings = ctk.CTkScrollableFrame(tabview.tab("Listings"), width=950, height=900)
+scroll_frame_listings.grid(row=2, column=0, padx=20, pady=20)
 
 def clear_tab(tab):
     for widget in tab.winfo_children():
         widget.destroy()
-
-
 
 def list_item_confirm(item, price, market):
     if price == "":
@@ -105,7 +107,7 @@ def list_item_confirm(item, price, market):
             csf_list_item(item["asset_id_csf"], int(float(price) * 100)),
             confirmation_window.destroy(),
             inventory.remove(item),
-            item_gen_button(inventory)
+            item_gen_button_sell(inventory)
             ))
         confirm_button.pack(padx=10, pady=10)
 
@@ -118,7 +120,7 @@ wear_conditions = [
     [0.45, 0.99]
 ]
 
-def item_call(item):
+def item_call_sell(item):
     item_window.deiconify()
     item_window.lift()
     
@@ -214,8 +216,10 @@ def item_call(item):
         listing_label = ctk.CTkLabel(item_current_listings_tabview.tab("Dmarket"), text=f"{offer['price']} | {str(offer['float_value'])[:6]}", bg_color="#383737")
         listing_label.pack(padx=5, pady=1, fill="x")
 
+def item_call_listing(item):
+    return
 
-def item_gen_button(list):
+def item_gen_button_sell(list):
     for widget in scroll_frame_sell.winfo_children():
         widget.destroy()
     for i, item in enumerate(list):
@@ -224,13 +228,24 @@ def item_gen_button(list):
                                compound="left", width=600, height=20,
                                anchor="w", fg_color="#1f6aa5", text_color="white",
                                corner_radius=0,
-                               command=lambda item=item: item_call(item))  # Pass item directly
+                               command=lambda item=item: item_call_sell(item))  # Pass item directly
         button.grid(row=i + 1, column=0, padx=20, pady=0, sticky="w")
 
+item_gen_button_sell(inventory)
 
-item_gen_button(inventory)
+def item_gen_button_listings(list):
+    for widget in scroll_frame_listings.winfo_children():
+        widget.destroy()
+    for i, item in enumerate(list):
+        item_text = f"{item["market"]} | {item["market_hash_name"]} | ${str(item["price"])} | {str(item["float_value"])[:6]} |"
+        button = ctk.CTkButton(scroll_frame_listings, text=item_text, font=("Arial", 15),
+                               compound="left", width=600, height=20,
+                               anchor="w", fg_color="#1f6aa5", text_color="white",
+                               corner_radius=0,
+                               command=lambda item=item: item_call_listing(item))
+        button.grid(row=i + 1, column=0, padx=20, pady=0, sticky="w")
 
-
+item_gen_button_listings(user_listings)
 
 app.grid_columnconfigure(0, weight=1)  # Entry expands
 app.grid_columnconfigure(1, weight=0)  # Button stays fixed

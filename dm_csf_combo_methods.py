@@ -92,6 +92,7 @@ def parse_dmarket_to_universal(item):
     price_info = offer.get("Price", {"Amount": 0, "Currency": "USD"})
 
     return {
+        "market": "DMarket",
         "listing_id_dm": item.get("AssetID", ""),
         "listing_id_csf": "",
         "def_index": 0,
@@ -119,6 +120,7 @@ def parse_csfloat_to_universal(listing):
         })
 
     return {
+        "market": "CSFloat",
         "listing_id_dm": "",
         "listing_id_csf": listing["id"],
         "def_index": item["def_index"],
@@ -150,7 +152,7 @@ def all_listings_universal():
         dmarket_listings.append(parse_dmarket_to_universal(item))
     
     all_listings = csfloat_listings + dmarket_listings
-    json.dump(all_listings, open("TKinterTradeTool/db/all_listings.json", "w"), indent=4)
+    # json.dump(all_listings, open("TKinterTradeTool/db/all_listings.json", "w"), indent=4)
     return all_listings
 
-all_listings_universal()
+# all_listings_universal()
