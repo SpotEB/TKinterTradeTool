@@ -279,8 +279,6 @@ def user_offers():
     return response.json()["Items"]
 
 def edit_offers(items):
-    signature_prefix = "dmar ed25519 "
-
     """
     Edit an existing offer by changing the price.
 
@@ -293,6 +291,8 @@ def edit_offers(items):
     Returns:
         dict: The API response as a JSON object.
     """
+    signature_prefix = "dmar ed25519 "
+
     http_method = "POST"
     api_url_path = "/marketplace-api/v1/user-offers/edit"
     nonce = str(round(datetime.now().timestamp()))

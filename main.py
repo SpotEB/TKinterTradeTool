@@ -6,7 +6,8 @@ import requests
 from io import BytesIO
 from dm_main import get_last_sales as last_sales_dm, offers_by_title as offers_by_title_dm, listing_convert_universal_dm, get_customized_fees as get_reduced_fees_dm
 from dm_methods import sales_convert_universal_dm
-from csf_methods import last_sales_csf, sales_convert_universal_csf, search_skin, search_commodity, listing_convert_universal_csf, csf_list_item
+from dm_buy import edit_offers as edit_offers_dm
+from csf_methods import last_sales_csf, sales_convert_universal_csf, search_skin, search_commodity, listing_convert_universal_csf, csf_list_item, update_listing_price as csf_update_listing_price
 from datetime import datetime, timezone
 from dm_csf_combo_methods import filtered_inventory, all_listings_universal as filtered_listings
 
@@ -111,6 +112,29 @@ def list_item_confirm(item, price, market):
             ))
         confirm_button.pack(padx=10, pady=10)
 
+def edit_item_confirm(item, price, market):
+    if price == "":
+        return
+    if market == "CSfloat":
+        confirmation_window = ctk.CTkToplevel(app)
+        confirmation_window.title("Confirmation")
+        confirmation_label = ctk.CTkLabel(confirmation_window, text=f"Are you sure you want to edit {item['market_hash_name']} to ${price} on CSFloat?\nCurrent price: ${item["price"]}", font=("Arial", 15))
+        confirmation_label.pack(padx=10, pady=10)
+        confirm_button = ctk.CTkButton(confirmation_window, text="Confirm", command=lambda: (
+            csf_update_listing_price(item["asset_id_csf"], int(float(price) * 100)),
+            confirmation_window.destroy(),
+            user_listings.remove(item),
+            item_gen_button_listings(user_listings)
+            ))
+        confirm_button.pack(padx=10, pady=10)
+    elif market == "Dmarket":
+        confirmation_window = ctk.CTkToplevel(app)
+        confirmation_window.title("Confirmation")
+        confirmation_label = ctk.CTkLabel(confirmation_window, text=f"Are you sure you want to edit {item['market_hash_name']} to ${price} on DMarket?\nCurrent price: ${item["price"]}", font=("Arial", 15))
+        confirmation_label.pack(padx=10, pady=10)
+        confirm_button = ctk.CTkButton(confirmation_window, text="Confirm", command=lambda: (
+            edit_offers_dm([{"OfferID": item["offer_id_dm"], "AssetID": item["listing_id_dm"], "Price": price}]
+            )))
 
 wear_conditions = [
     [0.00, 0.07],
@@ -217,7 +241,101 @@ def item_call_sell(item):
         listing_label.pack(padx=5, pady=1, fill="x")
 
 def item_call_listing(item):
-    return
+    
+    item_window.deiconify()
+    item_window.lift()
+    
+    
+    item_title.configure(text=f"{item['market_hash_name']}")
+    item_float.configure(text=f"Item Float: {item['float_value']}")
+    item_list_price_button.configure(command=lambda: edit_item_confirm(item, item_list_price_input.get(), item_list_market_choice.get()))
+
+    item_stickers = "Stickers: "
+    if item["stickers"].__len__() > 0:
+        for dict in item["stickers"]:
+            for key, value in dict.items():
+                item_stickers += f"\n{key}: {value}"
+            item_stickers += "\n"
+    else:
+        item_stickers = "Stickers: None"
+    
+    item_stickers_label.configure(text=f"{item_stickers}")
+
+    item_keychain = item["keychain"]
+    if item_keychain == "":
+        item_keychain = "Keychain: None"
+    else:
+        item_keychain = f"Keychain: {item_keychain}"
+    item_keychain_label.configure(text=f"{item_keychain}")
+
+
+    try: # Try to load the image
+        image = requests.get(item["item_image"]).content
+        loaded_image = Image.open(BytesIO(image)).resize((256, 192))
+        item_image_label.configure(image=ctk.CTkImage(light_image=loaded_image, dark_image=loaded_image, size=(256, 192)))
+    except Exception as e: # If it fails, load a placeholder image
+        print(f"Failed to load image: {e}")
+        placeholder_image = Image.open("TKinterTradeTool/db/placeholder_icon.webp").resize((256, 192))
+        item_image_label.configure(image=ctk.CTkImage(light_image=placeholder_image, size=(256, 192)))
+
+    clear_tab(item_last_sales_tabview.tab("CSfloat"))
+
+    for sale in last_sales_csf(item["market_hash_name"]):
+        sale = sales_convert_universal_csf(sale)   
+        sale_label = ctk.CTkLabel(item_last_sales_tabview.tab("CSfloat"), text=f"{sale['price']} | {str(sale['float_value'])[:6]} | {datetime.fromtimestamp(int(sale["date"]), tz=timezone.utc).strftime("%d/%m")}", bg_color="#383737")
+        sale_label.pack(padx=5, pady=1, fill="x")
+
+
+    clear_tab(item_current_listings_tabview.tab("CSfloat"))
+
+
+    if item["paint_index"] == 0 and item["market_hash_name"].startswith("Charm"):
+        pass
+    
+    elif item["paint_index"] == 0:
+        for listing in search_commodity(item["def_index"], limit=20):
+            if listing["type"] == "buy_now": 
+                listing_label = ctk.CTkLabel(item_current_listings_tabview.tab("CSfloat"), text=f"{listing['price']/100}", bg_color="#383737")
+                listing_label.pack(padx=5, pady=1, fill="x")
+
+    else:
+        item_max_float = None
+        item_min_float = None
+        for wear in wear_conditions:
+            if item["float_value"] < wear[1]:
+                item_max_float = wear[1]
+                item_min_float = wear[0]
+                break
+
+        if item["is_stattrak"]:
+            item_category = 2
+        elif item["is_souvenir"]:
+            item_category = 3
+        else:
+            item_category = 1
+
+        for listing in search_skin(item["def_index"], item["paint_index"], min_float=item_min_float, max_float=item_max_float, category=item_category, limit=20):
+            listing = listing_convert_universal_csf(listing)
+            if listing["listing_type"] == "buy_now": 
+                listing_label = ctk.CTkLabel(item_current_listings_tabview.tab("CSfloat"), text=f"{listing['price']} | {str(listing['float_value'])[:6]}", bg_color="#383737")
+                listing_label.pack(padx=5, pady=1, fill="x")
+
+
+
+    clear_tab(item_last_sales_tabview.tab("Dmarket"))
+
+    for sale in last_sales_dm(item["market_hash_name"])[0:20]:
+        sale = sales_convert_universal_dm(sale)
+        sale_label = ctk.CTkLabel(item_last_sales_tabview.tab("Dmarket"), text=f"{sale['price']} | {str(sale['float_value'])[:6]} | {datetime.fromtimestamp(int(sale["date"]), tz=timezone.utc).strftime("%d/%m")}", bg_color="#383737")
+        sale_label.pack(padx=5, pady=1, fill="x")
+
+
+    clear_tab(item_current_listings_tabview.tab("Dmarket"))
+
+    offers_universal = [listing_convert_universal_dm(offer) for offer in offers_by_title_dm(item["market_hash_name"], limit=100)]
+    for offer in offers_sorted(offers_universal)[0:20]:
+        listing_label = ctk.CTkLabel(item_current_listings_tabview.tab("Dmarket"), text=f"{offer['price']} | {str(offer['float_value'])[:6]}", bg_color="#383737")
+        listing_label.pack(padx=5, pady=1, fill="x")
 
 def item_gen_button_sell(list):
     for widget in scroll_frame_sell.winfo_children():

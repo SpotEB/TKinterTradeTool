@@ -94,6 +94,7 @@ def parse_dmarket_to_universal(item):
     return {
         "market": "DMarket",
         "listing_id_dm": item.get("AssetID", ""),
+        "offer_id_dm": offer.get("OfferID", ""),
         "listing_id_csf": "",
         "def_index": 0,
         "paint_index": int(attr.get("paintIndex", 0)),
@@ -122,6 +123,7 @@ def parse_csfloat_to_universal(listing):
     return {
         "market": "CSFloat",
         "listing_id_dm": "",
+        "offer_id_dm": "",
         "listing_id_csf": listing["id"],
         "def_index": item["def_index"],
         "paint_index": item.get("paint_index", 0),
