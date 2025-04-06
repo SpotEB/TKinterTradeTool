@@ -27,7 +27,7 @@ def reduced_fees_load():
 inventory = filtered_inventory()
 inventory = sorted(inventory, key=lambda x: x["market_hash_name"])
 
-user_listings = filtered_listings()
+user_listings = sorted(filtered_listings(), key=lambda x: x["listing_time"])
 
 empty_img = ctk.CTkImage(light_image=Image.new("RGBA", (1, 1)), size=(1, 1))
 

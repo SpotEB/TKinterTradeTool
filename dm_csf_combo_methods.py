@@ -3,7 +3,7 @@ from dm_main import user_inventory as user_inventory_dm, get_user_offers as user
 from dm_methods import item_convert_universal_dm
 import json
 import re
-
+from datetime import datetime
 
 def filtered_inventory():
     dmarket_inventory = []
@@ -92,6 +92,7 @@ def parse_dmarket_to_universal(item):
     price_info = offer.get("Price", {"Amount": 0, "Currency": "USD"})
 
     return {
+        "listing_time": int(offer.get("CreatedDate", "")),
         "market": "Dmarket",
         "listing_id_dm": item.get("AssetID", ""),
         "offer_id_dm": offer.get("OfferID", ""),
@@ -121,6 +122,7 @@ def parse_csfloat_to_universal(listing):
         })
 
     return {
+        "listing_time": int(datetime.fromisoformat(listing["created_at"].replace("Z", "+00:00")).timestamp()),
         "market": "CSfloat",
         "listing_id_dm": "",
         "offer_id_dm": "",
