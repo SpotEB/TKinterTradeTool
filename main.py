@@ -121,7 +121,7 @@ def edit_item_confirm(item, price, market):
         confirmation_label = ctk.CTkLabel(confirmation_window, text=f"Are you sure you want to edit {item['market_hash_name']} to ${price} on CSFloat?\nCurrent price: ${item["price"]}", font=("Arial", 15))
         confirmation_label.pack(padx=10, pady=10)
         confirm_button = ctk.CTkButton(confirmation_window, text="Confirm", command=lambda: (
-            csf_update_listing_price(item["asset_id_csf"], int(float(price) * 100)),
+            csf_update_listing_price(item["listing_id_csf"], int(float(price) * 100)),
             confirmation_window.destroy(),
             user_listings.remove(item),
             item_gen_button_listings(user_listings)
@@ -133,8 +133,13 @@ def edit_item_confirm(item, price, market):
         confirmation_label = ctk.CTkLabel(confirmation_window, text=f"Are you sure you want to edit {item['market_hash_name']} to ${price} on DMarket?\nCurrent price: ${item["price"]}", font=("Arial", 15))
         confirmation_label.pack(padx=10, pady=10)
         confirm_button = ctk.CTkButton(confirmation_window, text="Confirm", command=lambda: (
-            edit_offers_dm([{"OfferID": item["offer_id_dm"], "AssetID": item["listing_id_dm"], "Price": price}]
+            edit_offers_dm([{"OfferID": item["offer_id_dm"], "AssetID": item["listing_id_dm"], "Price": price}],
+            confirmation_window.destroy(),
+            user_listings.remove(item),
+            item_gen_button_listings(user_listings)
             )))
+        
+        confirm_button.pack(padx=10, pady=10)
 
 wear_conditions = [
     [0.00, 0.07],

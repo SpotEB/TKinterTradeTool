@@ -92,7 +92,7 @@ def parse_dmarket_to_universal(item):
     price_info = offer.get("Price", {"Amount": 0, "Currency": "USD"})
 
     return {
-        "market": "DMarket",
+        "market": "Dmarket",
         "listing_id_dm": item.get("AssetID", ""),
         "offer_id_dm": offer.get("OfferID", ""),
         "listing_id_csf": "",
@@ -121,7 +121,7 @@ def parse_csfloat_to_universal(listing):
         })
 
     return {
-        "market": "CSFloat",
+        "market": "CSfloat",
         "listing_id_dm": "",
         "offer_id_dm": "",
         "listing_id_csf": listing["id"],
