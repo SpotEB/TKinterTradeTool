@@ -230,40 +230,45 @@ def search_charm(keychain_index):
 
 
 def item_convert_universal_csf(item):
-    universal_item = {
-        "asset_id_dm": "",
-        "asset_id_csf": item["asset_id"],
-        "def_index": item["def_index"],
-        "paint_index": item.get("paint_index", 0),
-        "float_value": item.get("float_value", 0),
-        "is_stattrak": item.get("is_stattrak", False),
-        "is_souvenir": item.get("is_souvenir", False),
-        "keychain": "",
-        "market_hash_name": item["market_hash_name"],
-        "stickers": [],
-        "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/" + item["icon_url"]
-    }
-    
+    try:
+        universal_item = {
+            "asset_id_dm": "",
+            "asset_id_csf": item["asset_id"],
+            "def_index": item["def_index"],
+            "paint_index": item.get("paint_index", 0),
+            "float_value": item.get("float_value", 0),
+            "is_stattrak": item.get("is_stattrak", False),
+            "is_souvenir": item.get("is_souvenir", False),
+            "keychain": "",
+            "market_hash_name": item["market_hash_name"],
+            "stickers": [],
+            "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/" + item["icon_url"]
+        }
+        
 
 
-    for sticker in item.get("stickers", []):
-        try:
-            sticker["name"] = sticker["name"].replace("Sticker | ", "")
-            universal_item["stickers"].append({"name": sticker["name"], "price": sticker["reference"]["price"]})
-        except:
-            universal_item["stickers"].append({"name": sticker["name"], "price": 100000})
+        for sticker in item.get("stickers", []):
+            try:
+                sticker["name"] = sticker["name"].replace("Sticker | ", "")
+                universal_item["stickers"].append({"name": sticker["name"], "price": sticker["reference"]["price"]})
+            except:
+                universal_item["stickers"].append({"name": sticker["name"], "price": 100000})
 
-    if "keychains" in item:
-        universal_item["keychain"] = item["keychains"][0]["name"]
+        if "keychains" in item:
+            universal_item["keychain"] = item["keychains"][0]["name"]
 
 
-    if "listing_id" in item:
-        universal_item["is_listed"] = True
-        universal_item["listing_id"] = item["listing_id"]
-    else:
-        universal_item["is_listed"] = False
+        if "listing_id" in item:
+            universal_item["is_listed"] = True
+            universal_item["listing_id"] = item["listing_id"]
+        else:
+            universal_item["is_listed"] = False
 
-    return universal_item
+        return universal_item
+    except TypeError as e:
+        print(f"TypeError: {e}")
+        print(f"Item data: {item}")
+        return None
 
 
 def export_inventory():

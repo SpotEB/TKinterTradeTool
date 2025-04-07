@@ -76,8 +76,8 @@ def extract_stickers_from_dmarket(attr):
         if name_match and image_match:
             stickers.append({
                 "name": name_match.group(1),
-                "slot": int(slot),
-                "icon_url": image_match.group(1)
+                # "slot": int(slot),
+                # "icon_url": image_match.group(1)
             })
 
     return stickers
@@ -117,8 +117,9 @@ def parse_csfloat_to_universal(listing):
     for s in item.get("stickers", []):
         stickers.append({
             "name": s.get("name", ""),
-            "slot": s.get("slot", 0),
-            "icon_url": s.get("icon_url", "")
+            "price": s["reference"].get("price", 0),
+            # "slot": s.get("slot", 0),
+            # "icon_url": s.get("icon_url", "")
         })
 
     return {

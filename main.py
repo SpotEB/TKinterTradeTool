@@ -133,11 +133,11 @@ def edit_item_confirm(item, price, market):
         confirmation_label = ctk.CTkLabel(confirmation_window, text=f"Are you sure you want to edit {item['market_hash_name']} to ${price} on DMarket?\nCurrent price: ${item["price"]}", font=("Arial", 15))
         confirmation_label.pack(padx=10, pady=10)
         confirm_button = ctk.CTkButton(confirmation_window, text="Confirm", command=lambda: (
-            edit_offers_dm([{"OfferID": item["offer_id_dm"], "AssetID": item["listing_id_dm"], "Price": price}],
+            edit_offers_dm([{"OfferID": item["offer_id_dm"], "AssetID": item["listing_id_dm"], "Price": price}]),
             confirmation_window.destroy(),
             user_listings.remove(item),
             item_gen_button_listings(user_listings)
-            )))
+            ))
         
         confirm_button.pack(padx=10, pady=10)
 
@@ -251,7 +251,7 @@ def item_call_listing(item):
     item_window.lift()
     
     
-    item_title.configure(text=f"{item['market_hash_name']}")
+    item_title.configure(text=f"{item['market_hash_name']} | {item["price"]} | {item["market"]}")
     item_float.configure(text=f"Item Float: {item['float_value']}")
     item_list_price_button.configure(command=lambda: edit_item_confirm(item, item_list_price_input.get(), item_list_market_choice.get()))
 
@@ -271,7 +271,9 @@ def item_call_listing(item):
         item_keychain = "Keychain: None"
     else:
         item_keychain = f"Keychain: {item_keychain}"
-    item_keychain_label.configure(text=f"{item_keychain}")
+    item_keychain_label.configure(text=f"""{item_keychain}
+
+Item listed: {datetime.fromtimestamp(int(item["listing_time"]), tz=timezone.utc).strftime("%d/%m")}""")
 
 
     try: # Try to load the image
