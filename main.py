@@ -111,6 +111,16 @@ def list_item_confirm(item, price, market):
             item_gen_button_sell(inventory)
             ))
         confirm_button.pack(padx=10, pady=10)
+    elif market == "Dmarket":
+        confirmation_window = ctk.CTkToplevel(app)
+        confirmation_window.title("Confirmation")
+        confirmation_label = ctk.CTkLabel(confirmation_window, text=f"Are you sure you want to list {item['market_hash_name']} for ${price} on DMarket?", font=("Arial", 15))
+        confirmation_label.pack(padx=10, pady=10)
+        print(item["asset_id_dm"])
+        print(price)
+        confirm_button = ctk.CTkButton(confirmation_window, text="Confirm", command=lambda: (
+        ))
+
 
 def edit_item_confirm(item, price, market):
     if price == "":
