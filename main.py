@@ -212,7 +212,9 @@ def list_item_confirm(item, price, market):
                     "name": item["market_hash_name"]
                 }),
                 create_pending_listing_window(),
-                confirmation_window.destroy()
+                confirmation_window.destroy(),
+                inventory.remove(item),
+                item_gen_button_sell(inventory)
             )
         )
         confirm_button.pack(padx=10, pady=10)
