@@ -94,32 +94,128 @@ def clear_tab(tab):
     for widget in tab.winfo_children():
         widget.destroy()
 
+# Define this globally
+pending_listing_window = None
+dmarket_pending_listings = []
+
+def full_list_dm(listings):
+    return
+
+def create_pending_listing_window():
+    global pending_listing_window
+    global pending_listing_frame  # Now accessible even in refresh
+
+    def on_close():
+        global pending_listing_window
+        if pending_listing_window:
+            pending_listing_window.destroy()
+            pending_listing_window = None
+            dmarket_pending_listings.clear()
+
+    # If window exists and is valid, refresh its frame content
+    try:
+        if pending_listing_window and pending_listing_window.winfo_exists():
+            # Clear frame content
+            for widget in pending_listing_frame.winfo_children():
+                widget.destroy()
+
+            # Re-loop through the updated pending listings
+            for i in dmarket_pending_listings:
+                label = ctk.CTkLabel(pending_listing_frame, text=f"{i['name']} | ${i['price']}", anchor="w")
+                label.pack(fill="x", pady=2)
+
+            # Bring window to front
+            pending_listing_window.lift()
+            pending_listing_window.deiconify()
+            return
+    except:
+        pending_listing_window = None  # Clean up on stale reference
+
+    # Create new pending window
+    pending_listing_window = ctk.CTkToplevel(app)
+    pending_listing_window.title("Pending Listings")
+    pending_listing_window.geometry("350x400")
+    pending_listing_window.iconbitmap("TKinterTradeTool/tradetool.ico")
+    pending_listing_window.protocol("WM_DELETE_WINDOW", on_close)
+
+    # Scrollable area for listings (store in global)
+    pending_listing_frame = ctk.CTkScrollableFrame(pending_listing_window, width=300, height=250)
+    pending_listing_frame.pack(padx=10, pady=(10, 0), fill="both", expand=True)
+
+    for i in dmarket_pending_listings:
+        label = ctk.CTkLabel(pending_listing_frame, text=f"{i['name']} | ${i['price']}", anchor="w")
+        label.pack(fill="x", pady=2)
+
+    # Button frame
+    button_frame = ctk.CTkFrame(pending_listing_window)
+    button_frame.pack(pady=10)
+
+    list_btn = ctk.CTkButton(button_frame, text="List", command=lambda: (
+        full_list_dm(dmarket_pending_listings),
+        on_close()
+    ))
+    cancel_btn = ctk.CTkButton(button_frame, text="Cancel", command=on_close)
+
+    list_btn.pack(side="left", padx=10)
+    cancel_btn.pack(side="left", padx=10)
+
+
+
+        
+
 def list_item_confirm(item, price, market):
     if price == "":
         return
+
     if market == "CSfloat":
         confirmation_window = ctk.CTkToplevel(app)
         confirmation_window.title("Confirmation")
-        confirmation_label = ctk.CTkLabel(confirmation_window, text=f"Are you sure you want to list {item['market_hash_name']} for ${price} on CSFloat?", font=("Arial", 15))
+        confirmation_label = ctk.CTkLabel(
+            confirmation_window,
+            text=f"Are you sure you want to list {item['market_hash_name']} for ${price} on CSFloat?",
+            font=("Arial", 15)
+        )
         confirmation_label.pack(padx=10, pady=10)
         print(item["asset_id_csf"])
         print(price)
-        confirm_button = ctk.CTkButton(confirmation_window, text="Confirm", command=lambda: (
-            csf_list_item(item["asset_id_csf"], int(float(price) * 100)),
-            confirmation_window.destroy(),
-            inventory.remove(item),
-            item_gen_button_sell(inventory)
-            ))
+        confirm_button = ctk.CTkButton(
+            confirmation_window,
+            text="Confirm",
+            command=lambda: (
+                csf_list_item(item["asset_id_csf"], int(float(price) * 100)),
+                confirmation_window.destroy(),
+                inventory.remove(item),
+                item_gen_button_sell(inventory)
+            )
+        )
         confirm_button.pack(padx=10, pady=10)
+
     elif market == "Dmarket":
         confirmation_window = ctk.CTkToplevel(app)
         confirmation_window.title("Confirmation")
-        confirmation_label = ctk.CTkLabel(confirmation_window, text=f"Are you sure you want to list {item['market_hash_name']} for ${price} on DMarket?", font=("Arial", 15))
+        confirmation_label = ctk.CTkLabel(
+            confirmation_window,
+            text=f"Are you sure you want to list {item['market_hash_name']} for ${price} on DMarket?",
+            font=("Arial", 15)
+        )
         confirmation_label.pack(padx=10, pady=10)
         print(item["asset_id_dm"])
         print(price)
-        confirm_button = ctk.CTkButton(confirmation_window, text="Confirm", command=lambda: (
-        ))
+
+        confirm_button = ctk.CTkButton(
+            confirmation_window,
+            text="Confirm",
+            command=lambda: (
+                dmarket_pending_listings.append({
+                    "id": item["asset_id_dm"],
+                    "price": price,
+                    "name": item["market_hash_name"]
+                }),
+                create_pending_listing_window(),
+                confirmation_window.destroy()
+            )
+        )
+        confirm_button.pack(padx=10, pady=10)
 
 
 def edit_item_confirm(item, price, market):
