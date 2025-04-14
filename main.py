@@ -6,7 +6,7 @@ import requests
 from io import BytesIO
 from dm_main import get_last_sales as last_sales_dm, offers_by_title as offers_by_title_dm, listing_convert_universal_dm, get_customized_fees as get_reduced_fees_dm
 from dm_methods import sales_convert_universal_dm
-from dm_buy import edit_offers as edit_offers_dm
+from dm_buy import edit_offers as edit_offers_dm, create_listings_from_inventory as list_from_inventory_dm
 from csf_methods import last_sales_csf, sales_convert_universal_csf, search_skin, search_commodity, listing_convert_universal_csf, csf_list_item, update_listing_price as csf_update_listing_price
 from datetime import datetime, timezone
 from dm_csf_combo_methods import filtered_inventory, all_listings_universal as filtered_listings
@@ -97,9 +97,7 @@ def clear_tab(tab):
 # Define this globally
 pending_listing_window = None
 dmarket_pending_listings = []
-
-def full_list_dm(listings):
-    return
+dmarket_pending_listings_labels = []
 
 def create_pending_listing_window():
     global pending_listing_window
@@ -110,7 +108,7 @@ def create_pending_listing_window():
         if pending_listing_window:
             pending_listing_window.destroy()
             pending_listing_window = None
-            dmarket_pending_listings.clear()
+            dmarket_pending_listings_labels.clear()
 
     # If window exists and is valid, refresh its frame content
     try:
@@ -120,8 +118,8 @@ def create_pending_listing_window():
                 widget.destroy()
 
             # Re-loop through the updated pending listings
-            for i in dmarket_pending_listings:
-                label = ctk.CTkLabel(pending_listing_frame, text=f"{i['name']} | ${i['price']}", anchor="w")
+            for i in dmarket_pending_listings_labels:
+                label = ctk.CTkLabel(pending_listing_frame, text=f" | ${i['price']}", anchor="w")
                 label.pack(fill="x", pady=2)
 
             # Bring window to front
@@ -142,18 +140,24 @@ def create_pending_listing_window():
     pending_listing_frame = ctk.CTkScrollableFrame(pending_listing_window, width=300, height=250)
     pending_listing_frame.pack(padx=10, pady=(10, 0), fill="both", expand=True)
 
-    for i in dmarket_pending_listings:
-        label = ctk.CTkLabel(pending_listing_frame, text=f"{i['name']} | ${i['price']}", anchor="w")
+    for i in dmarket_pending_listings_labels:
+        label = ctk.CTkLabel(pending_listing_frame, text=f"{i["name"]} | ${i['price']}", anchor="w")
         label.pack(fill="x", pady=2)
 
     # Button frame
     button_frame = ctk.CTkFrame(pending_listing_window)
     button_frame.pack(pady=10)
 
-    list_btn = ctk.CTkButton(button_frame, text="List", command=lambda: (
-        full_list_dm(dmarket_pending_listings),
-        on_close()
-    ))
+    list_btn = ctk.CTkButton(
+        button_frame,
+        text="List",
+        command=lambda: (
+            print("Input check:"),
+            [print(repr(item["id"]), type(item["id"])) for item in dmarket_pending_listings],
+            list_from_inventory_dm(dmarket_pending_listings),
+            on_close()
+        )
+    )
     cancel_btn = ctk.CTkButton(button_frame, text="Cancel", command=on_close)
 
     list_btn.pack(side="left", padx=10)
@@ -207,10 +211,12 @@ def list_item_confirm(item, price, market):
             text="Confirm",
             command=lambda: (
                 dmarket_pending_listings.append({
-                    "id": item["asset_id_dm"],
-                    "price": price,
-                    "name": item["market_hash_name"]
+                    "id": str(item["asset_id_dm"]),
+                    "price": float(price),
                 }),
+                dmarket_pending_listings_labels.append(
+                    {"name": item["market_hash_name"], "price": float(price)}
+                ),
                 create_pending_listing_window(),
                 confirmation_window.destroy(),
                 inventory.remove(item),
