@@ -10,19 +10,46 @@ from dm_buy import edit_offers as edit_offers_dm, create_listings_from_inventory
 from csf_methods import last_sales_csf, sales_convert_universal_csf, search_skin, search_commodity, listing_convert_universal_csf, csf_list_item, update_listing_price as csf_update_listing_price
 from datetime import datetime, timezone
 from dm_csf_combo_methods import filtered_inventory, all_listings_universal as filtered_listings
-
-
+import os
+from datetime import datetime, timedelta, UTC
 
 def offers_sorted(offers):
     offers.sort(key=lambda x: x["price"])
     return offers
 
+CACHE_PATH_FEES = "TKinterTradeTool/db/reduced_fees.json"
+
 def reduced_fees_fetch():
-    return
+    """Fetch from API and cache to file"""
+    reduced_fees_dict = get_reduced_fees_dm()
+    titles = [item["title"] for item in reduced_fees_dict["reducedFees"]]
+
+    with open(CACHE_PATH_FEES, "w") as f:
+        json.dump({
+            "fetched_at": datetime.now(UTC).isoformat(),
+            "titles": titles
+        }, f)
+
+    return set(titles)
 
 def reduced_fees_load():
-    with open("TKinterTradeTool/db/reduced_fees.json", "r") as file:
-        return json.load(file)
+    """Load reduced-fee items from cache or fetch if stale (> 24h)"""
+    if os.path.exists(CACHE_PATH_FEES):
+        try:
+            with open(CACHE_PATH_FEES, "r") as f:
+                data = json.load(f)
+            fetched_at = datetime.fromisoformat(data.get("fetched_at"))
+            if datetime.now(UTC) - fetched_at < timedelta(hours=24):
+                return set(data.get("titles", []))
+        except Exception as e:
+            print("⚠️ Error loading reduced_fees cache:", e)
+
+    # Fetch fresh if not found or expired
+    print("🔄 Fetching fresh reduced-fee list...")
+    return reduced_fees_fetch()
+
+reduced_fees = reduced_fees_load()
+
 
 inventory = filtered_inventory()
 inventory = sorted(inventory, key=lambda x: x["market_hash_name"])
@@ -291,6 +318,12 @@ def item_call_sell(item):
     item_keychain_label.configure(text=f"{item_keychain}")
 
 
+    if item["market_hash_name"] in reduced_fees:
+        item_fees_label.configure(text="Dmarket Fees: Reduced")
+    else:
+        item_fees_label.configure(text="Dmarket Fees: Standard")
+
+
     try: # Try to load the image
         image = requests.get(item["item_image"]).content
         loaded_image = Image.open(BytesIO(image)).resize((256, 192))
@@ -521,6 +554,9 @@ item_stickers_label.grid(row=2, column=0, padx=20, pady=5, sticky="w")
 
 item_keychain_label = ctk.CTkLabel(item_info_frame, text="Keychain: None", font=("Arial", 15))
 item_keychain_label.grid(row=3, column=0, padx=20, pady=5, sticky="w")
+
+item_fees_label = ctk.CTkLabel(item_info_frame, text="Dmarket Fees: Standard", font=("Arial", 15))
+item_fees_label.grid(row=4, column=0, padx=20, pady=5, sticky="w")
 
 item_list_frame = ctk.CTkFrame(item_window, width=600, height=200)
 item_list_frame.grid(row=2, column=0, padx=10, pady=10, sticky="w")
