@@ -86,7 +86,16 @@ def search_items_sell(event=None):
     filtered_inventory = [item for item in inventory if search_term in item["market_hash_name"].lower()]
     clear_tab(scroll_frame_sell)
     item_gen_button_sell(filtered_inventory)
-    
+
+def search_items_listings(event=None):
+    if search_entry_listings.get() == "":
+        item_gen_button_listings(user_listings)
+        return
+
+    search_term = search_entry_listings.get().lower()
+    filtered_listings = [item for item in user_listings if search_term in item["market_hash_name"].lower()]
+    clear_tab(scroll_frame_listings)
+    item_gen_button_listings(filtered_listings)
 
 
 # Search Entry
@@ -101,9 +110,9 @@ search_button_sell = ctk.CTkButton(tabview.tab("Sell"), text="Search", width=100
 search_button_sell.grid(row=0, column=1, padx=(0, 10), pady=10)
 search_entry_sell.bind("<Return>", search_items_sell)  # Bind the Enter key to the search_items function
 
-search_button_listings = ctk.CTkButton(tabview.tab("Listings"), text="Search", width=100, command=search_items_sell)
+search_button_listings = ctk.CTkButton(tabview.tab("Listings"), text="Search", width=100, command=search_items_listings)
 search_button_listings.grid(row=0, column=1, padx=(0, 10), pady=10)
-search_entry_listings.bind("<Return>", search_items_sell)  # Bind the Enter key to the search_items function
+search_entry_listings.bind("<Return>", search_items_listings)  # Bind the Enter key to the search_items function
 
 # Configure grid to allow entry to expand
 tabview.tab("Sell").grid_columnconfigure(0, weight=1)
@@ -137,6 +146,14 @@ def create_pending_listing_window():
             pending_listing_window = None
             dmarket_pending_listings_labels.clear()
 
+    def on_close_full(i):
+        global pending_listing_window
+        if pending_listing_window:
+            pending_listing_window.destroy()
+            pending_listing_window = None
+            dmarket_pending_listings.clear()
+            dmarket_pending_listings_labels.clear()
+
     # If window exists and is valid, refresh its frame content
     try:
         if pending_listing_window and pending_listing_window.winfo_exists():
@@ -146,7 +163,7 @@ def create_pending_listing_window():
 
             # Re-loop through the updated pending listings
             for i in dmarket_pending_listings_labels:
-                label = ctk.CTkLabel(pending_listing_frame, text=f" | ${i['price']}", anchor="w")
+                label = ctk.CTkLabel(pending_listing_frame, text=f"{i["name"]} | ${i['price']}", anchor="w")
                 label.pack(fill="x", pady=2)
 
             # Bring window to front
@@ -181,7 +198,7 @@ def create_pending_listing_window():
         command=lambda: (
             print("Input check:"),
             [print(repr(item["id"]), type(item["id"])) for item in dmarket_pending_listings],
-            list_from_inventory_dm(dmarket_pending_listings),
+            list_from_inventory_dm(dmarket_pending_listings, callback=on_close_full),
             on_close()
         )
     )
@@ -216,7 +233,7 @@ def list_item_confirm(item, price, market):
                 csf_list_item(item["asset_id_csf"], int(float(price) * 100)),
                 confirmation_window.destroy(),
                 inventory.remove(item),
-                item_gen_button_sell(inventory)
+                update_button_sold(item),
             )
         )
         confirm_button.pack(padx=10, pady=10)
@@ -247,7 +264,7 @@ def list_item_confirm(item, price, market):
                 create_pending_listing_window(),
                 confirmation_window.destroy(),
                 inventory.remove(item),
-                item_gen_button_sell(inventory)
+                update_button_sold(item),
             )
         )
         confirm_button.pack(padx=10, pady=10)
@@ -265,7 +282,7 @@ def edit_item_confirm(item, price, market):
             csf_update_listing_price(item["listing_id_csf"], int(float(price) * 100)),
             confirmation_window.destroy(),
             user_listings.remove(item),
-            item_gen_button_listings(user_listings)
+            update_button_listing(item),
             ))
         confirm_button.pack(padx=10, pady=10)
     elif market == "Dmarket":
@@ -277,7 +294,7 @@ def edit_item_confirm(item, price, market):
             edit_offers_dm([{"OfferID": item["offer_id_dm"], "AssetID": item["listing_id_dm"], "Price": price}]),
             confirmation_window.destroy(),
             user_listings.remove(item),
-            item_gen_button_listings(user_listings)
+            update_button_listing(item),
             ))
         
         confirm_button.pack(padx=10, pady=10)
@@ -491,33 +508,72 @@ Item listed: {datetime.fromtimestamp(int(item["listing_time"]), tz=timezone.utc)
         listing_label = ctk.CTkLabel(item_current_listings_tabview.tab("Dmarket"), text=f"{offer['price']} | {str(offer['float_value'])[:6]}", bg_color="#383737")
         listing_label.pack(padx=5, pady=1, fill="x")
 
-def item_gen_button_sell(list):
+button_refs_sell = {}  # Holds references to sell buttons
+button_refs_listings = {}  # Holds references to listings buttons
+
+def item_gen_button_sell(item_list):
     for widget in scroll_frame_sell.winfo_children():
         widget.destroy()
-    for i, item in enumerate(list):
+
+    button_refs_sell.clear()
+
+    for i, item in enumerate(item_list):
+        unique_key = f"{item['asset_id_dm']}_{item['asset_id_csf']}"
         item_text = f"{item['market_hash_name']} | {str(item['float_value'])[:6]} |"
-        button = ctk.CTkButton(scroll_frame_sell, text=item_text, font=("Arial", 15),
-                               compound="left", width=600, height=20,
-                               anchor="w", fg_color="#1f6aa5", text_color="white",
+        button = ctk.CTkButton(scroll_frame_sell,
+                               text=item_text,
+                               font=("Arial", 15),
+                               compound="left",
+                               width=600,
+                               height=20,
+                               anchor="w",
+                               fg_color="#1f6aa5",
+                               text_color="white",
                                corner_radius=0,
-                               command=lambda item=item: item_call_sell(item))  # Pass item directly
+                               command=lambda item=item: item_call_sell(item))
         button.grid(row=i + 1, column=0, padx=20, pady=0, sticky="w")
 
-item_gen_button_sell(inventory)
+        button_refs_sell[unique_key] = button
 
-def item_gen_button_listings(list):
+
+def update_button_sold(item):
+    unique_key = f"{item['asset_id_dm']}_{item['asset_id_csf']}"
+    button = button_refs_sell.get(unique_key)
+    if button:
+        button.configure(fg_color="gray", state="disabled")
+
+
+def item_gen_button_listings(item_list):
     for widget in scroll_frame_listings.winfo_children():
         widget.destroy()
-    for i, item in enumerate(list):
-        item_text = f"{item["market"]} | {item["market_hash_name"]} | ${str(item["price"])} | {str(item["float_value"])[:6]} |"
-        button = ctk.CTkButton(scroll_frame_listings, text=item_text, font=("Arial", 15),
-                               compound="left", width=600, height=20,
-                               anchor="w", fg_color="#1f6aa5", text_color="white",
+
+    button_refs_listings.clear()
+
+    for i, item in enumerate(item_list):
+        unique_key = f"{item['listing_id_dm']}_{item['listing_id_csf']}"
+        item_text = f"{item['market']} | {item['market_hash_name']} | ${str(item['price'])} | {str(item['float_value'])[:6]} |"
+        button = ctk.CTkButton(scroll_frame_listings,
+                               text=item_text,
+                               font=("Arial", 15),
+                               compound="left",
+                               width=600,
+                               height=20,
+                               anchor="w",
+                               fg_color="#1f6aa5",
+                               text_color="white",
                                corner_radius=0,
                                command=lambda item=item: item_call_listing(item))
         button.grid(row=i + 1, column=0, padx=20, pady=0, sticky="w")
 
-item_gen_button_listings(user_listings)
+        button_refs_listings[unique_key] = button
+
+
+def update_button_listing(item):
+    unique_key = f"{item['listing_id_dm']}_{item['listing_id_csf']}"
+    button = button_refs_listings.get(unique_key)
+    if button:
+        button.configure(fg_color="gray", state="disabled")
+
 
 app.grid_columnconfigure(0, weight=1)  # Entry expands
 app.grid_columnconfigure(1, weight=0)  # Button stays fixed
@@ -611,6 +667,8 @@ item_image = ctk.CTkImage(light_image=Image.open("TKinterTradeTool/db/placeholde
 item_image_label = ctk.CTkLabel(item_info_frame, image=item_image, text="")
 item_image_label.grid(row=2, column=1, padx=10, pady=10, sticky="w")  # Added sticky="w"
 
+item_gen_button_sell(inventory)
+item_gen_button_listings(user_listings)
 
 
 app.mainloop()
