@@ -1,5 +1,19 @@
 [
     {
+        "asset_id_dm": "302028390:5710094579:43368329356:730",
+        "asset_id_csf": "43368329356",
+        "def_index": 4904,
+        "paint_index": 0,
+        "float_value": 0,
+        "is_stattrak": false,
+        "is_souvenir": false,
+        "keychain": "",
+        "market_hash_name": "Kilowatt Case",
+        "stickers": [],
+        "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFQznaKdID5D6d23ldHSwKOmZeyEz21XvZZ12LzE9t6nigbgqkplNjihJIaLMlhpF1ZeR5c",
+        "is_listed": false
+    },
+    {
         "asset_id_dm": "302028390:5710094579:43247781027:730",
         "asset_id_csf": "43247781027",
         "def_index": 4904,
@@ -1706,11 +1720,11 @@
         "stickers": [
             {
                 "name": "NEO (Foil) | Cologne 2015",
-                "price": 1372
+                "price": 1374
             },
             {
                 "name": "Virtus.Pro | Katowice 2014",
-                "price": 43068
+                "price": 43315
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhz2v_Nfz5H_uOlm7-Ehfb6NL7ul2hS7ctlmdbN_Iv9nBrmqUQ-Y2H1doGTdg5qZw2GrFm3wLjp0JPovp3LmiRjsiYgsXyOy0G0n1gSOY9ZIQF5",
@@ -1729,19 +1743,19 @@
         "stickers": [
             {
                 "name": "OG (Holo) | Paris 2023",
-                "price": 31
+                "price": 30
             },
             {
                 "name": "OG (Holo) | Paris 2023",
-                "price": 31
+                "price": 30
             },
             {
                 "name": "Drug War Veteran",
-                "price": 94
+                "price": 86
             },
             {
                 "name": "Drug War Veteran",
-                "price": 94
+                "price": 86
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposr-kLAtl7PLJTjtO7dGzh7-HnvD8J_XSwGkG65d1juqZp4rz3VLhrhc_azqhJtORdgM4YFvR-1C5wry5gpHqot2XnpVn5DmP",
@@ -1824,7 +1838,7 @@
             },
             {
                 "name": "Vitality (Holo) | 2020 RMR",
-                "price": 5
+                "price": 4
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovrG1eVcwg8zPYgJSvozmxL-CmufxIbLQmlRV-sR2hef--InxgUG55UVrNTuiJtLEegVqaVjQqVDvxOq5jMfvuZTMy3disnYr4X7Znxa21xtSLrs4sEGlP_Q",
@@ -1843,7 +1857,7 @@
         "stickers": [
             {
                 "name": "b1t (Champion) | Copenhagen 2024",
-                "price": 1
+                "price": 2
             },
             {
                 "name": "Legendary Eagle",
@@ -1859,7 +1873,7 @@
             },
             {
                 "name": "This Is Fine (Chicken)",
-                "price": 1
+                "price": 2
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhz2v_Nfz5H_uOxh7-Gw_alIITcn2dC-MByteHE9Jrsxlbj_EFtZzigdtfEJgE6YlzSrgS5lLy50cTp7czJynVk6yIjt32JmBapwUYbB6Bv7uo",
@@ -1953,20 +1967,6 @@
         "is_listed": false
     },
     {
-        "asset_id_dm": "480085569:937306045:42479478735:730",
-        "asset_id_csf": "42479478735",
-        "def_index": 60,
-        "paint_index": 430,
-        "float_value": 0.2572398781776428,
-        "is_stattrak": false,
-        "is_souvenir": false,
-        "keychain": "",
-        "market_hash_name": "M4A1-S | Hyper Beast (Field-Tested)",
-        "stickers": [],
-        "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhz2v_Nfz5H_uO1gb-Gw_alDLPIhm5D18d0i_rVyoHwjF2hpl1kNzqlIITBJAA3ZlnT_VHtxOm715ftu5SamHJg7yYmtivczhG3hE0ecKUx0uGnXixz",
-        "is_listed": false
-    },
-    {
         "asset_id_dm": "6384648170:6216370068:42479477910:730",
         "asset_id_csf": "42479477910",
         "def_index": 1355,
@@ -1993,7 +1993,7 @@
         "stickers": [
             {
                 "name": "Chompers",
-                "price": 21
+                "price": 20
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhz2v_Nfz5H_uO1gb-Gw_alIITXk25V4ct2te_T8ILvkWu8rhIqKnehJoDEelU5Zl2E-FS6xOzphZC-vZrImno26HF04n7bmRzihE5LPOZpm7XAHvQhUotF",
@@ -2213,19 +2213,19 @@
         "stickers": [
             {
                 "name": "Jerry (Holo) | Paris 2023",
-                "price": 11
+                "price": 12
             },
             {
                 "name": "paiN Gaming (Holo) | Paris 2023",
-                "price": 101
+                "price": 100
             },
             {
                 "name": "TeSeS (Holo) | Paris 2023",
-                "price": 27
+                "price": 29
             },
             {
                 "name": "r3salt (Holo) | Paris 2023",
-                "price": 14
+                "price": 13
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo6m1FBRp3_bGcjhQ08-mq42OhP_LILrXk39I-sB1teXI8oThxlax_UBsZD_3ItTGdVVtM1qD-1O9we-81pfquprJzyRnunIq5nuOzUepwUYbavHYHkU",
@@ -2305,7 +2305,7 @@
         "stickers": [
             {
                 "name": "Flex",
-                "price": 31
+                "price": 33
             },
             {
                 "name": "Friend Code",
@@ -2313,7 +2313,7 @@
             },
             {
                 "name": "Shaolin",
-                "price": 14
+                "price": 16
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoor-mcjhnwMzcdD4b09ujkZKCm_v1DLbUkmJE5Ysoi-uZpNrz3lK1qRE9ZGulJ4PHdgI5aVGBrAe2xLq50MLtvJzJnSFqpGB8sk1_5Glq",
@@ -2332,19 +2332,19 @@
         "stickers": [
             {
                 "name": "Wallbang",
-                "price": 26
+                "price": 27
             },
             {
                 "name": "Wallbang",
-                "price": 26
+                "price": 27
             },
             {
                 "name": "Spartan",
-                "price": 12
+                "price": 14
             },
             {
                 "name": "Wallbang",
-                "price": 26
+                "price": 27
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhz2v_Nfz5H_uOlm7-Ehfb6NL7ul2hS7ctlmdbN_Iv9nBrmqUQ-Y2H1doGTdg5qZw2GrFm3wLjp0JPovp3LmiRjsiYgsXyOy0G0n1gSOY9ZIQF5",
@@ -2371,7 +2371,7 @@
             },
             {
                 "name": "b1t (Champion) | Copenhagen 2024",
-                "price": 1
+                "price": 2
             },
             {
                 "name": "VINI | Copenhagen 2024",
@@ -2398,11 +2398,11 @@
         "stickers": [
             {
                 "name": "Copenhagen Flames (Holo) | Stockholm 2021",
-                "price": 439
+                "price": 455
             },
             {
                 "name": "Complexity Gaming (Holo) | Paris 2023",
-                "price": 53
+                "price": 52
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo6m1FBRp3_bGcjhQ09-jq5WYh8jnI7LFkGJD7fp9g-7J4cL23lexqhI9ZT3wd4WTJ1VvZ1rZr1G2wu2805W46p6amnJj6SEmt3_YgVXp1sALRvj2",
@@ -2421,7 +2421,7 @@
         "stickers": [
             {
                 "name": "Cloud9 | Antwerp 2022",
-                "price": 3
+                "price": 4
             },
             {
                 "name": "Cloud9 | Copenhagen 2024",
@@ -2429,15 +2429,15 @@
             },
             {
                 "name": "Cloud9 | Antwerp 2022",
-                "price": 3
+                "price": 4
             },
             {
                 "name": "Cloud9 | Antwerp 2022",
-                "price": 3
+                "price": 4
             },
             {
                 "name": "Cloud9 (Gold) | Copenhagen 2024",
-                "price": 356
+                "price": 370
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo6m1FBRp3_bGcjhQ09-jq5WYh8jkIbLfgnhF-sBwh9bM8Ij8nVn6qRZuZGr1ctDBdw9vYF3V_FO6yee50cfv7sjMz3Jj7HIr7C2Ilx3i1AYMMLId9XKCBQ",
@@ -2456,11 +2456,11 @@
         "stickers": [
             {
                 "name": "High Heat",
-                "price": 94
+                "price": 89
             },
             {
                 "name": "Hypnoteyes (Holo)",
-                "price": 48
+                "price": 45
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoor-mcjhnwMzcdD4b08-jhIWZlP_1IbzUklRc7cF4n-SPoIj2ilDsqUI9YT-ictDAJwRtM1qF_FC_wLzv0561vcmYyiQxviIjtGGdwUK6qqUWfQ",
@@ -2479,7 +2479,7 @@
         "stickers": [
             {
                 "name": "magixx (Gold, Champion) | Shanghai 2024",
-                "price": 151
+                "price": 154
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhjxszFJTwW09C5goW0mvLwOq7c2GlV6sckib-Uotig2gziqBdsZGqiIdOWclM8Y1mF_li9kOi5jcTvucvXiSw02NJ3Vm0",
@@ -2525,7 +2525,7 @@
             },
             {
                 "name": "FURIA (Holo) | Rio 2022",
-                "price": 102
+                "price": 86
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopujwezhjxszQYzxb08zkwdC0mvLwOq7c2G5S7Jd03rCU9NWjjVDs_hFlYTyiLNCRcA49NFzS-1W_we3vgJXvvp7XiSw0W7okCM4",
@@ -2579,7 +2579,7 @@
         "stickers": [
             {
                 "name": "Vertigo's Hero (Holo)",
-                "price": 40
+                "price": 38
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou6r8FAR17P7YKAJK9diklb-GkvP9JraflDIH7JEni-vEp9X2igzt-kNvYGuicNLHcAdtN1DQ_QS6xu-8gMTt6IOJlyUWK4u21g",
@@ -2597,41 +2597,6 @@
         "market_hash_name": "StatTrak\u2122 M4A1-S | Emphorosaur-S (Field-Tested)",
         "stickers": [],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhz2v_Nfz5H_uO1gb-Gw_alIITXk25V4ct2te_T8ILvkWu5rhc1JjTtIobBcwA-ZV-G_lHvwuzr15fq75WamHRm6Scj4XiJmB3hhB8ea-FnhOveFwthv4bIjg",
-        "is_listed": false
-    },
-    {
-        "asset_id_dm": "6291657702:638243157:42461901134:730",
-        "asset_id_csf": "42461901134",
-        "def_index": 60,
-        "paint_index": 383,
-        "float_value": 0.06966016441583633,
-        "is_stattrak": false,
-        "is_souvenir": false,
-        "keychain": "",
-        "market_hash_name": "M4A1-S | Basilisk (Factory New)",
-        "stickers": [
-            {
-                "name": "Pixel Avenger",
-                "price": 10
-            },
-            {
-                "name": "Separate Pixels",
-                "price": 5
-            },
-            {
-                "name": "Choose Wisely",
-                "price": 4
-            },
-            {
-                "name": "GODSENT (Holo) | 2020 RMR",
-                "price": 12
-            },
-            {
-                "name": "FaZe | 2020 RMR",
-                "price": 13
-            }
-        ],
-        "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhz2v_Nfz5H_uO3hb-Gw_alIITTl3hY5MxigdbN_Iv9nBq1-RJvYTz0LYaXew8-YFHY-1K3x73rg5W_7p3JzyBn6SMlsXbUzRCxn1gSOTjImL47",
         "is_listed": false
     },
     {
@@ -2680,45 +2645,10 @@
         "stickers": [
             {
                 "name": "This Is Fine (H)",
-                "price": 3
+                "price": 2
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo6m1FBRp3_bGcjhQ09-jq5WYh8jkIbLfgnhF-sBwh9bN_Iv9nBrj-BE-Nz2iJoXBJFJtYFzY_1e9yO-51pK-7prInHdl7yEi5niJzUawn1gSOR_ZgPWk",
-        "is_listed": false
-    },
-    {
-        "asset_id_dm": "6827084288:4428793733:42461467351:730",
-        "asset_id_csf": "42461467351",
-        "def_index": 7,
-        "paint_index": 1035,
-        "float_value": 0.2693127989768982,
-        "is_stattrak": true,
-        "is_souvenir": false,
-        "keychain": "",
-        "market_hash_name": "StatTrak\u2122 AK-47 | Slate (Field-Tested)",
-        "stickers": [
-            {
-                "name": "PGL (Holo) | Antwerp 2022",
-                "price": 81
-            },
-            {
-                "name": "PGL (Holo) | Antwerp 2022",
-                "price": 81
-            },
-            {
-                "name": "PGL (Holo) | Antwerp 2022",
-                "price": 81
-            },
-            {
-                "name": "PGL (Holo) | Antwerp 2022",
-                "price": 81
-            },
-            {
-                "name": "FaZe Clan (Holo) | Shanghai 2024",
-                "price": 77
-            }
-        ],
-        "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhnwMzJemkV08ykm4aOhOT9PLXQmlRc7cF4n-SP9tXwjgLs-ko5ZGnxJISWJFI4N1DUrlm2k-bu05S86MyfwXc3v3Mg4mGdwUIg2vE7lg",
         "is_listed": false
     },
     {
@@ -2746,11 +2676,11 @@
             },
             {
                 "name": "Vitality (Glitter) | Paris 2023",
-                "price": 1
+                "price": 2
             },
             {
                 "name": "Vitality (Glitter) | Paris 2023",
-                "price": 1
+                "price": 2
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo6m1FBRp3_bGcjhQ08-mq42OhP_LILrXk39I-sB1teXI8oThxlax_UBsZD_3ItTGdVVtM1qD-1O9we-81pfquprJzyRnunIq5nuOzUepwUYbavHYHkU",
@@ -2851,7 +2781,7 @@
         "stickers": [
             {
                 "name": "Go Boom (Glitter)",
-                "price": 36
+                "price": 35
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou6r8FAR17P7YKAJE49Oyq4ODlv76DLPUl31IpsQg2bqX9ojziwTn_hVkYD_wLIPHJgU6Zw2EqAS3wO7m1MO-us_PzCN9-n51PMw6uE0",
@@ -2902,15 +2832,15 @@
             },
             {
                 "name": "Astralis (Gold) | Stockholm 2021",
-                "price": 1250
+                "price": 1616
             },
             {
                 "name": "PGL (Gold) | Stockholm 2021",
-                "price": 194
+                "price": 190
             },
             {
                 "name": "Copenhagen Flames (Gold) | Stockholm 2021",
-                "price": 679
+                "price": 677
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposr-kLAtl7PvRTjlG_N2iq5WZlcj5Nr_Yg2YfvZEh2uqW8NShjAfn_BU-amz0JtOTJgBraQ3S-Fm6lOq5jMfu6M_NzGwj5HeqobrWDg",
@@ -2929,11 +2859,11 @@
         "stickers": [
             {
                 "name": "Supreme Master First Class",
-                "price": 5
+                "price": 6
             },
             {
                 "name": "Fools Gold Wave Rider",
-                "price": 37
+                "price": 36
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou6ryFAR17P7YJgJE6d2kq4iOluHtfezXlDlSu5xw3--YpImi0Qbk_ktlYmmgcNSRJFI2MljWq1i-yenng5Wi_MOe9VKvGOE",
@@ -2989,11 +2919,11 @@
         "stickers": [
             {
                 "name": "Sharks Esports (Holo) | Stockholm 2021",
-                "price": 126
+                "price": 122
             },
             {
                 "name": "Renegades (Holo) | Antwerp 2022",
-                "price": 45
+                "price": 42
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbaqKAxf0Ob3djFN79eJg4GYg_L4MrXVqXlU6sB9teTE8YXghRrjrUs5MGnzctTBcldqNFDU-wC_x72-1MLvu8_LyyZnuiNxs3rUmkCwn1gSOSRz69nF",
@@ -3012,7 +2942,7 @@
         "stickers": [
             {
                 "name": "Dead Eye",
-                "price": 96
+                "price": 95
             },
             {
                 "name": "FL1T (Holo) | Stockholm 2021",
@@ -3024,7 +2954,7 @@
             },
             {
                 "name": "b1t (Holo) | Stockholm 2021",
-                "price": 14
+                "price": 15
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo6m1FBRp3_bGcjhQ09-jq5WYh8j2P7rSnVRd59FkmdbM8Ij8nVn6qktuZmmgdtSXe1c8NQ2E-FPoybq-gZS86sidn3NrvCZ04XiPyROzhAYMMLKvKj9Quw",
@@ -3043,11 +2973,11 @@
         "stickers": [
             {
                 "name": "apEX | Cluj-Napoca 2015",
-                "price": 306
+                "price": 298
             },
             {
                 "name": "s1mple | Antwerp 2022",
-                "price": 11
+                "price": 12
             },
             {
                 "name": "Overpass Diorama (Foil)",
@@ -3055,7 +2985,7 @@
             },
             {
                 "name": "karrigan (Holo, Champion) | Antwerp 2022",
-                "price": 78
+                "price": 77
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposLuoKhRf0uL3dzxP7c-Jl4-Fg_jhIYTck29Y_cg_27_F9Nz0jg3tqUBrNT3ycYeXJANtNAqFqFW6x-68h5C0753LyHpivz5iuyiyaxazog",
@@ -3090,7 +3020,7 @@
             },
             {
                 "name": "Kawaii Killer CT",
-                "price": 84
+                "price": 83
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhz2v_Nfz5H_uOxh7-Gw_alIITYmHhe5ct4i9bM8Ij8nVn6qBFtYjqiLIaQdFU2MFnUrFHqlbzvgcLpupibwCdgsyQk5i7YzByxiQYMMLJwpapZQQ",
@@ -3117,7 +3047,7 @@
             },
             {
                 "name": "The MongolZ (Holo) | Paris 2023",
-                "price": 19
+                "price": 20
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJegJK6d2yq5ODmOPLO7TdmVRZ7cRnk6eXpIj00VKx_EtrMWulLY6dIAc9NA3T_lC9lLrtgZe-vJrPzCBh6Sck-z-DyEK4jxFH",
@@ -3177,11 +3107,11 @@
         "stickers": [
             {
                 "name": "MOUZ (Glitter) | Copenhagen 2024",
-                "price": 16
+                "price": 15
             },
             {
                 "name": "Team Spirit | Copenhagen 2024",
-                "price": 1
+                "price": 2
             },
             {
                 "name": "Virtus.pro | Copenhagen 2024",
@@ -3236,45 +3166,22 @@
         "stickers": [
             {
                 "name": "Ninjas in Pyjamas (Glitter) | Antwerp 2022",
-                "price": 6
+                "price": 5
             },
             {
                 "name": "Ninjas in Pyjamas (Glitter) | Antwerp 2022",
-                "price": 6
+                "price": 5
             },
             {
                 "name": "Drug War Veteran",
-                "price": 94
+                "price": 86
             },
             {
                 "name": "Drug War Veteran",
-                "price": 94
+                "price": 86
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhz2v_Nfz5H_uO1gb-Gw_alIITXk25V4ct2te_T8ILvkWu4ohQ0J3f6LNSdcg5rNF_Yr1bswLy505G8752dy3dguigltCmJlxPmiUtOOLRmm7XAHjOl7uFi",
-        "is_listed": false
-    },
-    {
-        "asset_id_dm": "6818848612:520026599:42461400717:730",
-        "asset_id_csf": "42461400717",
-        "def_index": 4,
-        "paint_index": 353,
-        "float_value": 0.12143304944038391,
-        "is_stattrak": false,
-        "is_souvenir": false,
-        "keychain": "",
-        "market_hash_name": "Glock-18 | Water Elemental (Minimal Wear)",
-        "stickers": [
-            {
-                "name": "Zeusception (Holo)",
-                "price": 61
-            },
-            {
-                "name": "Spinx | Shanghai 2024",
-                "price": 1
-            }
-        ],
-        "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbaqKAxf0Ob3djFN79f7mImagvLnML7fglRd4cJ5nqfEpdzz2Abg_BU-NW_1cNeRcQA4M1nW-AW6xOzogpPu6pTAnXplvHFw-z-DyEmuPIPI",
         "is_listed": false
     },
     {
@@ -3400,7 +3307,7 @@
         "stickers": [
             {
                 "name": "JOTA (Holo) | Antwerp 2022",
-                "price": 30
+                "price": 28
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhz2v_Nfz5H_uO1gb-Gw_alIITXk25V4ct2te_T8ILvkWu4ohQ0J3f6LNSdcg5rNF_Yr1bswLy505G8752dy3dguigltCmJlxPmiUtOOLRmm7XAHjOl7uFi",
@@ -3433,7 +3340,7 @@
         "stickers": [
             {
                 "name": "Web Stuck (Holo)",
-                "price": 47
+                "price": 46
             },
             {
                 "name": "zont1x (Glitter, Champion) | Shanghai 2024",
@@ -3548,7 +3455,7 @@
         "stickers": [
             {
                 "name": "paiN Gaming (Glitter) | Copenhagen 2024",
-                "price": 4
+                "price": 6
             },
             {
                 "name": "forZe eSports | Paris 2023",
@@ -3611,15 +3518,15 @@
         "stickers": [
             {
                 "name": "Web Stuck",
-                "price": 45
+                "price": 43
             },
             {
                 "name": "Web Stuck",
-                "price": 45
+                "price": 43
             },
             {
                 "name": "Gold Web",
-                "price": 57
+                "price": 52
             },
             {
                 "name": "Counter-Tech",
@@ -3646,7 +3553,7 @@
             },
             {
                 "name": "apEX (Holo) | Stockholm 2021",
-                "price": 64
+                "price": 66
             },
             {
                 "name": "shox (Holo) | Stockholm 2021",
@@ -3654,7 +3561,7 @@
             },
             {
                 "name": "Vitality (Holo) | 2020 RMR",
-                "price": 5
+                "price": 4
             },
             {
                 "name": "Natus Vincere (Glitter) | Paris 2023",
@@ -3677,7 +3584,7 @@
         "stickers": [
             {
                 "name": "Boom Epicenter (Glitter)",
-                "price": 10
+                "price": 9
             },
             {
                 "name": "Complexity Gaming (Glitter) | Paris 2023",
@@ -3790,19 +3697,19 @@
         "stickers": [
             {
                 "name": "Fnatic (Glitter) | Paris 2023",
-                "price": 3
+                "price": 2
             },
             {
                 "name": "Fnatic (Glitter) | Paris 2023",
-                "price": 3
+                "price": 2
             },
             {
                 "name": "Fnatic (Glitter) | Paris 2023",
-                "price": 3
+                "price": 2
             },
             {
                 "name": "Fnatic (Glitter) | Paris 2023",
-                "price": 3
+                "price": 2
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhz2v_Nfz5H_uOlm7-Ehfb6NL7ul2hS7ctlmdbM8Ij8nVn6_BJpazj0JY_DdAc8YVCCrlm_wO3oh5W-75zAzCQxuCh24n2PzRO_1wYMMLLr38DtyA",
@@ -3913,7 +3820,7 @@
         "stickers": [
             {
                 "name": "Natus Vincere (Glitter) | Copenhagen 2024",
-                "price": 29
+                "price": 30
             },
             {
                 "name": "G2 Esports (Glitter) | Copenhagen 2024",
@@ -3921,7 +3828,7 @@
             },
             {
                 "name": "Team Spirit (Glitter) | Copenhagen 2024",
-                "price": 21
+                "price": 26
             },
             {
                 "name": "Complexity Gaming (Glitter) | Copenhagen 2024",
@@ -3929,7 +3836,7 @@
             },
             {
                 "name": "ropz (Glitter) | Copenhagen 2024",
-                "price": 45
+                "price": 46
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhz2v_Nfz5H_uO1gb-Gw_alIITXk25V4ct2te_T8ILvkWu4ohQ0J3f6LNSdcg5rNF_Yr1bswLy505G8752dy3dguigltCmJlxPmiUtOOLRmm7XAHjOl7uFi",
@@ -3948,7 +3855,7 @@
         "stickers": [
             {
                 "name": "Dinked",
-                "price": 90
+                "price": 89
             },
             {
                 "name": "Blitzkrieg",
@@ -3960,7 +3867,7 @@
             },
             {
                 "name": "Bullet Rain",
-                "price": 38
+                "price": 28
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FABz7PLfYQJS5NO0m5O0mvLwOq7c2G5UvsMo377D89in3wO3-UM_Nm30JYaccAI3YQ7XqVTtwuu9hMS-vJjXiSw0Waxutb0",
@@ -4042,15 +3949,15 @@
         "stickers": [
             {
                 "name": "Incineration",
-                "price": 41
+                "price": 38
             },
             {
                 "name": "qikert | Rio 2022",
-                "price": 23
+                "price": 20
             },
             {
                 "name": "North (Holo) | Berlin 2019",
-                "price": 24
+                "price": 23
             },
             {
                 "name": "FURIA | Copenhagen 2024",
@@ -4155,7 +4062,7 @@
         "stickers": [
             {
                 "name": "Team LDLC.com | Cologne 2014",
-                "price": 1853
+                "price": 1890
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhjxszYfi5H5di5mr-HnvD8J_XTwm4F7JYg0uqRpd6m2wfmqUttYm-nd4GRcQE_NwnX8gC3wL-608Doot2XnnmMd3ys",
@@ -4174,7 +4081,7 @@
         "stickers": [
             {
                 "name": "Incineration",
-                "price": 41
+                "price": 38
             },
             {
                 "name": "Terrorist-Tech",
@@ -4197,11 +4104,11 @@
         "stickers": [
             {
                 "name": "Bonehead (Holo)",
-                "price": 75
+                "price": 74
             },
             {
                 "name": "Poorly Drawn Chicken (Holo)",
-                "price": 266
+                "price": 263
             },
             {
                 "name": "Cluck (Holo)",
@@ -4209,11 +4116,11 @@
             },
             {
                 "name": "Cyber Chicken (Holo)",
-                "price": 32
+                "price": 31
             },
             {
                 "name": "Ten Years (Foil)",
-                "price": 40
+                "price": 38
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou7umeldf0Ob3fDxBvYyJmoGIhfLLPr7Vn35cppZ32u-Qp92ijgzk-kdqZj_0JdeVcFQ8YlzR-1m-xr_q1JC_vczOnXt9-n512ovruPU",
@@ -4254,11 +4161,11 @@
             },
             {
                 "name": "Nodios (Holo) | Copenhagen 2024",
-                "price": 15
+                "price": 14
             },
             {
                 "name": "Natus Vincere (Glitter) | Rio 2022",
-                "price": 12
+                "price": 10
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhz2v_Nfz5H_uO1gb-Gw_alIITXk25V4ct2te_T8ILvkWu4ohQ0J3f6LNSdcg5rNF_Yr1bswLy505G8752dy3dguigltCmJlxPmiUtOOLRmm7XAHjOl7uFi",
@@ -4312,7 +4219,7 @@
         "stickers": [
             {
                 "name": "Vertigo's Hero (Holo)",
-                "price": 40
+                "price": 38
             },
             {
                 "name": "Complexity Gaming (Glitter) | Paris 2023",
@@ -4320,7 +4227,7 @@
             },
             {
                 "name": "Big Hugs (Holo)",
-                "price": 24
+                "price": 26
             },
             {
                 "name": "Please Return To",
@@ -4328,7 +4235,7 @@
             },
             {
                 "name": "Complexity Gaming (Holo) | Paris 2023",
-                "price": 53
+                "price": 52
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopuP1FABz7OORIQJR5N26mI-cqPDmMq3UqWZU7Mxkh6fC8dig2Qax_kVpZ2H7JNSXdAA5NwzR-Fe-xO65g5Xt7ZvMwXZr6yEq-z-DyOba6g1p",
@@ -4443,7 +4350,7 @@
         "stickers": [
             {
                 "name": "Sneaky Beaky Dept. (Holo)",
-                "price": 87
+                "price": 88
             },
             {
                 "name": "GODSENT (Holo) | 2020 RMR",
@@ -4474,7 +4381,7 @@
             },
             {
                 "name": "Sonic (Glitter) | Shanghai 2024",
-                "price": 1
+                "price": 2
             },
             {
                 "name": "phzy | Shanghai 2024",
@@ -4515,7 +4422,7 @@
         "stickers": [
             {
                 "name": "Kimberly",
-                "price": 176
+                "price": 171
             },
             {
                 "name": "Merietta",
@@ -4527,7 +4434,7 @@
             },
             {
                 "name": "Drug War Veteran",
-                "price": 94
+                "price": 86
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbaqKAxf0vL3djFN79eJxdi0guX2MrXum2Re5vp3j__E57P5gVO8v11pMD_yJteTdAI7NVjV_Fboxum80cPt78-dnXpmsnJxsy7cyRey1BkecKUx0mzUGeJe",
@@ -4546,11 +4453,11 @@
         "stickers": [
             {
                 "name": "Drug War Veteran",
-                "price": 94
+                "price": 86
             },
             {
                 "name": "Drug War Veteran",
-                "price": 94
+                "price": 86
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposr-kLAtl7PDdTjlH7du6kb-KguXxJqjummJW4NE_ibuYoo2j2Vbg_BA6Mm_xJoOQJldtY1mD-lW4w7jvh5a_7ZiYyCBq6T5iuyiyQWuzXg",
@@ -4573,7 +4480,7 @@
             },
             {
                 "name": "Astralis (Foil) | 2020 RMR",
-                "price": 150
+                "price": 160
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhz2v_Nfz5H_uO1gb-Gw_alDL3dl3hZ6sRygdbM8Ij8nVn6_UQ6Mj_2cdCcJgM2ZQnT_QC3yOy7gJC_v8nMmHFiu3EksSqOnEO_1QYMMLKV5eK0QA",
@@ -4592,11 +4499,11 @@
         "stickers": [
             {
                 "name": "Drug War Veteran",
-                "price": 94
+                "price": 86
             },
             {
                 "name": "Drug War Veteran",
-                "price": 94
+                "price": 86
             },
             {
                 "name": "Fluxo (Glitter) | Paris 2023",
@@ -4604,11 +4511,11 @@
             },
             {
                 "name": "Master Guardian",
-                "price": 3
+                "price": 5
             },
             {
                 "name": "Master Guardian",
-                "price": 3
+                "price": 5
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopamie19f0Ob3Yi5FvISJl4iZmPr1J7LSqWZU7Mxkh6eS9NSgjFXi_hY_ZW-hIo7BIQM4YwzW-VO3xrvp15a7vs_AwHBk6HNz-z-DyNOZu79Y",
@@ -4627,7 +4534,7 @@
         "stickers": [
             {
                 "name": "Boom Detonation (Glitter)",
-                "price": 16
+                "price": 20
             },
             {
                 "name": "BOROS (Glitter) | Paris 2023",
@@ -4650,7 +4557,7 @@
         "stickers": [
             {
                 "name": "FaZe Clan | Krakow 2017",
-                "price": 141
+                "price": 153
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbaqKAxf0vL3djFN79eJxdi0guX2MrXum2Re5vp3j__E57P5gVO8v11pMD_yJteTdAI7NVjV_Fboxum80cPt78-dnXpmsnJxsy7cyRey1BkecKUx0mzUGeJe",
@@ -4669,15 +4576,15 @@
         "stickers": [
             {
                 "name": "100 Thieves (Foil) | 2020 RMR",
-                "price": 22
+                "price": 20
             },
             {
                 "name": "100 Thieves (Foil) | 2020 RMR",
-                "price": 22
+                "price": 20
             },
             {
                 "name": "100 Thieves (Foil) | 2020 RMR",
-                "price": 22
+                "price": 20
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhth_KcTi5M7dezlomfksj4OrzZgiUAvJMojL6W9omsjgHirkNkZGqhdYfAdFQ7YlDR-1XswL3vgZa678ic1zI97V2YJQr8",
@@ -4798,7 +4705,7 @@
         "is_listed": false
     },
     {
-        "asset_id_dm": "6986487065:3608090179:41812386949:730",
+        "asset_id_dm": "6986973949:3608090179:41812386949:730",
         "asset_id_csf": "41812386949",
         "def_index": 40,
         "paint_index": 899,
@@ -4810,11 +4717,11 @@
         "stickers": [
             {
                 "name": "Coral Skill Surf (Holo)",
-                "price": 215
+                "price": 212
             },
             {
                 "name": "Handle With Care (Holo)",
-                "price": 67
+                "price": 82
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopamie19f0Ob3Yi5FvISJgImInPvxIYTck29Y_cg_ibCY8dvw3wK2qkZsZ276dteRIwI4MFvZ8lO7webs0cW66cjAmyNm6T5iuyjOEYCyCg",
@@ -4852,15 +4759,15 @@
         "stickers": [
             {
                 "name": "PGL (Gold) | Copenhagen 2024",
-                "price": 70
+                "price": 72
             },
             {
                 "name": "Outsiders (Glitter) | Antwerp 2022",
-                "price": 10
+                "price": 9
             },
             {
                 "name": "Tyranids Ravener",
-                "price": 30
+                "price": 24
             },
             {
                 "name": "Rice Bomb",
@@ -4887,7 +4794,7 @@
         "stickers": [
             {
                 "name": "PGL (Gold) | Copenhagen 2024",
-                "price": 70
+                "price": 72
             },
             {
                 "name": "Mirage (Gold)",
@@ -4895,11 +4802,11 @@
             },
             {
                 "name": "Natus Vincere (Gold) | Copenhagen 2024",
-                "price": 616
+                "price": 692
             },
             {
                 "name": "FaZe Clan (Gold) | Copenhagen 2024",
-                "price": 400
+                "price": 401
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbaqKAxf2-r3dTlS7ciJhImFnMj5Nr_Yg2YfscBz2b-Totz321W1_ko9NT-iIYTHcQU3N1rR-Fm-xuu80Z61uJ-ammwj5HfgvE7qhQ",
@@ -4918,11 +4825,11 @@
         "stickers": [
             {
                 "name": "PGL (Gold) | Stockholm 2021",
-                "price": 194
+                "price": 190
             },
             {
                 "name": "Ninjas in Pyjamas (Gold) | Stockholm 2021",
-                "price": 229
+                "price": 261
             },
             {
                 "name": "Mirage (Gold)",
@@ -5012,7 +4919,7 @@
         "stickers": [
             {
                 "name": "Loving Eyes (Holo)",
-                "price": 435
+                "price": 432
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopujwezhh3szdYz9D4uO6nYeDg7n1N7iFzm5S6ZxyjuqVoImtiwTh-EBkZW71JtCScgc_MFDX_wO6ye7pm9bi6-hOxTXs",
@@ -5031,19 +4938,19 @@
         "stickers": [
             {
                 "name": "Heroic (Holo) | 2020 RMR",
-                "price": 5
+                "price": 7
             },
             {
                 "name": "Heroic (Holo) | 2020 RMR",
-                "price": 5
+                "price": 7
             },
             {
                 "name": "Heroic (Holo) | 2020 RMR",
-                "price": 5
+                "price": 7
             },
             {
                 "name": "ESL One Cologne 2014 (Blue)",
-                "price": 1668
+                "price": 1574
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhjxszFJTwW09uknYaNnvnLPr7Vn35cpscpiLvE9I6j3FLh-kRoZm-hcYeWdVdvNQyF_FbvkL-5h8W96pnOwCR9-n51HyOnKWM",
@@ -5078,7 +4985,7 @@
         "is_listed": false
     },
     {
-        "asset_id_dm": "6986487068:520041153:41494132749:730",
+        "asset_id_dm": "6989831607:520041153:41494132749:730",
         "asset_id_csf": "41494132749",
         "def_index": 4,
         "paint_index": 353,
@@ -5208,7 +5115,7 @@
             },
             {
                 "name": "Fireball",
-                "price": 2
+                "price": 3
             },
             {
                 "name": "Team Liquid (Glitter) | Paris 2023",
@@ -5216,7 +5123,7 @@
             },
             {
                 "name": "Fireball",
-                "price": 2
+                "price": 3
             },
             {
                 "name": "Techno4K | Paris 2023",
@@ -5239,23 +5146,23 @@
         "stickers": [
             {
                 "name": "Into The Breach (Glitter) | Paris 2023",
-                "price": 4
+                "price": 3
             },
             {
                 "name": "Into The Breach (Glitter) | Paris 2023",
-                "price": 4
+                "price": 3
             },
             {
                 "name": "Into The Breach (Glitter) | Paris 2023",
-                "price": 4
+                "price": 3
             },
             {
                 "name": "Into The Breach (Glitter) | Paris 2023",
-                "price": 4
+                "price": 3
             },
             {
                 "name": "Into The Breach (Glitter) | Paris 2023",
-                "price": 4
+                "price": 3
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhz2v_Nfz5H_uO1gb-Gw_alDL3dl3hZ6sRygdbM8Ij8nVn6_UQ6Mj_2cdCcJgM2ZQnT_QC3yOy7gJC_v8nMmHFiu3EksSqOnEO_1QYMMLKV5eK0QA",
@@ -5456,7 +5363,7 @@
             },
             {
                 "name": "Boom Epicenter (Glitter)",
-                "price": 10
+                "price": 9
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgporrf0e1Y07PLZTiVPvYznwL-bgvn_DLbUkmJE5Yt33O3D8N_xiwCw-kRpYDqidYeUdQdtYg3W_FLoyL-7jZa97czOyHRipGB8stwd1Zot",
@@ -5637,19 +5544,19 @@
         "stickers": [
             {
                 "name": "Astralis | 2020 RMR",
-                "price": 3
+                "price": 6
             },
             {
                 "name": "Astralis | 2020 RMR",
-                "price": 3
+                "price": 6
             },
             {
                 "name": "Astralis | 2020 RMR",
-                "price": 3
+                "price": 6
             },
             {
                 "name": "Astralis | Stockholm 2021",
-                "price": 12
+                "price": 18
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbupIgthwczAaAJF7dC_mL-YnvD6MrfuhG5V18l4jeHVu4rw3law_xY_Zj_yd9KSdVVvaVnU-QLtxr_pg5C-6szMzXdm6HQn4njD30vgIYa6F5Q",
@@ -5668,11 +5575,11 @@
         "stickers": [
             {
                 "name": "Boom Detonation (Glitter)",
-                "price": 16
+                "price": 20
             },
             {
                 "name": "Boom Detonation (Glitter)",
-                "price": 16
+                "price": 20
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopujwezhh3szdYz9D4uO6nYeDg7n1N7iFzm5S6ZxyjuqVoImtiwTh-EBkZW71JtCScgc_MFDX_wO6ye7pm9bi6-hOxTXs",
@@ -5705,7 +5612,7 @@
         "stickers": [
             {
                 "name": "Loving Eyes (Holo)",
-                "price": 435
+                "price": 432
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpos7asPwJf1-bJfQJH4NWikb-DjvPmPITCgnlY48BOhuDG_Zi70Q3lqkY6NTj6IYDBJgJtaVmEqwfoyem6jZG66p3LmHZguHF253aOlgv330_RcoNyEA",
@@ -5724,7 +5631,7 @@
         "stickers": [
             {
                 "name": "Hydro Geyser",
-                "price": 7
+                "price": 8
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbupIgthwczAaAJF7dC_mL-YnvD6MrfuhG5V18h0juDU-MKljQWyr0tvZWv2cICXd1Q8aVmG_lC5x-nr15e66pTAzSE2s3YityqMgVXp1r7cWgTf",
@@ -5743,11 +5650,11 @@
         "stickers": [
             {
                 "name": "Zap Cat",
-                "price": 5
+                "price": 4
             },
             {
                 "name": "Blue Swallow",
-                "price": 43
+                "price": 41
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopb3wflFf0Ob3YjoXuY-Jl5mJkuXLN6nQkWRf18h0juDU-MLw2gbm-kpqMW2lI4SVdwdtZQvQ-FK5x7_pjJG0u8yYnXNk7CIh5yyLgVXp1oqX5zw8",
@@ -5916,7 +5823,7 @@
         "stickers": [
             {
                 "name": "GamerLegion (Holo) | Paris 2023",
-                "price": 89
+                "price": 94
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopujwezhjxszFfjNH9eO7kYSCgvq6YbiFlW8BvJ11iOiW9Nnx2wzk80VpNmzxd9WQI1Q7NFzU-VC3lbzrgIj84srQZxMaAA",
@@ -5957,7 +5864,7 @@
             },
             {
                 "name": "lux (Holo) | Copenhagen 2024",
-                "price": 20
+                "price": 17
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbaqKAxf0Ob3djFN79eJmY-EmcjmMrnTn39u5cB1g_zMu4_0iwfgrUJoYTr2d4bBdFI-M1zQ_AS9ye2718W1usnIwXNjsyJx5i7D30vgvEM2zXM",
@@ -5976,7 +5883,7 @@
         "stickers": [
             {
                 "name": "sjuush (Glitter) | Copenhagen 2024",
-                "price": 8
+                "price": 7
             },
             {
                 "name": "nicoodoz (Glitter) | Copenhagen 2024",
@@ -5999,7 +5906,7 @@
         "stickers": [
             {
                 "name": "cadiaN | Stockholm 2021",
-                "price": 2
+                "price": 3
             },
             {
                 "name": "chopper (Champion) | Shanghai 2024",
@@ -6026,11 +5933,11 @@
             },
             {
                 "name": "First Blood",
-                "price": 258
+                "price": 252
             },
             {
                 "name": "Free Hugs",
-                "price": 52
+                "price": 54
             },
             {
                 "name": "Scavenger",
@@ -6067,7 +5974,7 @@
         "stickers": [
             {
                 "name": "Robo",
-                "price": 83
+                "price": 82
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo6m1FBRp3_bGcjhQ09-jq5WYh8j3Jq_um25V4dB8xLrCo9Tw3VGx80RvYTqmdYHDeg9saVmGq1m4xry7gJK56M_BwXA26Ck8pSGKD6d5YK8",
@@ -6102,7 +6009,7 @@
         "is_listed": false
     },
     {
-        "asset_id_dm": "6986557729:1312321166:41197692215:730",
+        "asset_id_dm": "6989831608:1312321166:41197692215:730",
         "asset_id_csf": "41197692215",
         "def_index": 61,
         "paint_index": 504,
@@ -6114,7 +6021,7 @@
         "stickers": [
             {
                 "name": "Too Old for This",
-                "price": 10
+                "price": 9
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo6m1FBRp3_bGcjhQ09-jq5WYh8j_OrfdqWhe5sN4mOTE8bP4jVC9vh5yYmugd9KRJlI_MAnY_AS3kOy9h5ftuMvPmiE2vSQm5S3ZmBXigk5Eavsv26LMgCO2Og",
@@ -6147,19 +6054,19 @@
         "stickers": [
             {
                 "name": "Battle Scarred",
-                "price": 336
+                "price": 348
             },
             {
                 "name": "Stan",
-                "price": 29
+                "price": 27
             },
             {
                 "name": "Battle Scarred",
-                "price": 336
+                "price": 348
             },
             {
                 "name": "Nemiga (Holo) | 2020 RMR",
-                "price": 15
+                "price": 16
             },
             {
                 "name": "Boom (Holo) | 2020 RMR",
@@ -6196,7 +6103,7 @@
         "stickers": [
             {
                 "name": "Monster",
-                "price": 5
+                "price": 4
             },
             {
                 "name": "Rat Pack",
@@ -6204,7 +6111,7 @@
             },
             {
                 "name": "Shooting Star Return",
-                "price": 52
+                "price": 54
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgporrf0e1Y07PLFTiVP08a5mYKCksj7Nb3UmHhY_sBOh-zF_Jn4xgHs-UFlZWD7cNWUdgQ9ZFvV-ljolL-7gMXv7ZrJyHFrviUm5H-LzESpwUYbgP-2AVE",
@@ -6251,22 +6158,22 @@
         "stickers": [
             {
                 "name": "Luminosity Gaming (Holo) | MLG Columbus 2016",
-                "price": 8049
+                "price": 7746
             },
             {
                 "name": "Crown (Foil)",
-                "price": 39539
+                "price": 39860
             },
             {
                 "name": "Nice Shot",
-                "price": 120
+                "price": 119
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FAR17P7NdShR7eO3g5C0m_7zO6-fxmhV7JIh2--Y9oqgi1Dl_RA_ZGDzLYfAcgY6Z12F8wfswee9gZDv7YOJlyXhUFhJjA",
         "is_listed": false
     },
     {
-        "asset_id_dm": "6978086249:469452568:40799254524:730",
+        "asset_id_dm": "6989831609:469452568:40799254524:730",
         "asset_id_csf": "40799254524",
         "def_index": 30,
         "paint_index": 303,
@@ -6278,7 +6185,7 @@
         "stickers": [
             {
                 "name": "Assassin",
-                "price": 105
+                "price": 101
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoor-mcjhjxszcdD4b092lnYmGmOHLPr7Vn35cpsMm0rmTpYj2ilft-UFoN2qiLYSSdAU3M1iFq1e-xuvmhZ-1tJTIz3p9-n51sW043UI",
@@ -6325,23 +6232,23 @@
         "stickers": [
             {
                 "name": "Tamara (Holo)",
-                "price": 210
+                "price": 209
             },
             {
                 "name": "Sherry (Holo)",
-                "price": 122
+                "price": 117
             },
             {
                 "name": "Fnatic (Holo) | DreamHack 2014",
-                "price": 30231
+                "price": 30051
             },
             {
                 "name": "HellRaisers (Holo) | Atlanta 2017",
-                "price": 5957
+                "price": 5901
             },
             {
                 "name": "Ivette (Holo)",
-                "price": 184
+                "price": 182
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszOeC9H_9mkhIWFg8j1OO-GqWlD6dN-teXI8oThxgfkqRBqNW30cIeTIFU3NAnZ-Fnsleq6gJW6uJXOmHQwuXR0sXfZmhepwUYblYdNWxM",
@@ -6360,7 +6267,7 @@
         "stickers": [
             {
                 "name": "Welcome to the Clutch",
-                "price": 66
+                "price": 68
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou6r8FAZh7OXNYylL69OJmImMn-O6a76GwWkB7ZIo3r3Erdqm3FeyqkA-YjigcYWdc1I8YlDT8lPvl-u714j84spzvdbEfQ",
@@ -6393,7 +6300,7 @@
         "stickers": [
             {
                 "name": "Patch | Bloodhound",
-                "price": 42
+                "price": 45
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXA6Q1NL4kmrAlOA0_FVPCi2t_fUkRxNztUoreaLQVp7OXJYzRD4si02tHSlKatNe-GxzoB68cgiezCrYnwjFbs-hE6amjwIYKSdlM2YV6E_1WggbC4kdowLd4",
@@ -6412,7 +6319,7 @@
         "stickers": [
             {
                 "name": "Patch | Shattered Web",
-                "price": 43
+                "price": 42
             },
             {
                 "name": "Patch | Bravo",
@@ -6435,7 +6342,7 @@
         "stickers": [
             {
                 "name": "Patch | Shattered Web",
-                "price": 43
+                "price": 42
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXA6Q1NL4kmrAlOA0_FVPCi2t_fUkRxNztDu4W1Iwhl3frQTitD_tW3mpSN2fOsMr-Dwj8Aup1307-W9N-s2wCw_BFpYDyiJdfGIFI5NA3R-VK9lO7xxcjrKxt2X-E",
@@ -6496,7 +6403,7 @@
         "stickers": [
             {
                 "name": "AdreN (Gold) | Krakow 2017",
-                "price": 62836
+                "price": 62915
             },
             {
                 "name": "G2 Esports (Gold) | Krakow 2017",
@@ -6535,7 +6442,7 @@
             },
             {
                 "name": "Into The Breach (Glitter) | Paris 2023",
-                "price": 4
+                "price": 3
             },
             {
                 "name": "Silent Ninja (Foil)",
@@ -6558,7 +6465,7 @@
         "stickers": [
             {
                 "name": "Patch | Metal Gold Nova I",
-                "price": 114
+                "price": 121
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXA6Q1NL4kmrAlOA0_FVPCi2t_fUkRxNztDu4WnKgtr0v33ZzxQ5d24gIjFwaD3YeqFxD5TvMMh2r2Q8d-li1XtqktrZm32ddLBIQM5aQ3Y_FDrxfCv28HDU8uXLw",
@@ -6577,11 +6484,11 @@
         "stickers": [
             {
                 "name": "Patch | Bloodhound",
-                "price": 42
+                "price": 45
             },
             {
                 "name": "Patch | Vanguard",
-                "price": 23
+                "price": 24
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXA6Q1NL4kmrAlOA0_FVPCi2t_fUkRxNztDu4WnKgtr0v33ZzxQ5d24gIjFwaD3YeqFxD5TvMMh2r2Q8d-li1XtqktrZm32ddLBIQM5aQ3Y_FDrxfCv28HDU8uXLw",
@@ -6614,19 +6521,19 @@
         "stickers": [
             {
                 "name": "Virtus.Pro (Foil) | Stockholm 2021",
-                "price": 252
+                "price": 239
             },
             {
                 "name": "Virtus.Pro (Foil) | Stockholm 2021",
-                "price": 252
+                "price": 239
             },
             {
                 "name": "Virtus.Pro | Katowice 2014",
-                "price": 43068
+                "price": 43315
             },
             {
                 "name": "Virtus.Pro (Foil) | Stockholm 2021",
-                "price": 252
+                "price": 239
             }
         ],
         "item_image": "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou7uifDhoyszBcjJR7dSzkJKEmcj4OrzZgiVQvp112ruVpNqk3FKw8hdkN2jyIY_EcwI4aFGF-APskOnvjJHtusjA1zI97fEIz3Nv",
@@ -6733,7 +6640,7 @@
             },
             {
                 "name": "Ivette (Holo)",
-                "price": 184
+                "price": 182
             },
             {
                 "name": "Ninjas in Pyjamas | Paris 2023",

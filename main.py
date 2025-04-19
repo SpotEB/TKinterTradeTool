@@ -583,7 +583,7 @@ app.grid_rowconfigure(1, weight=1)  # Scrollable frame expands
 item_window = ctk.CTkToplevel(app)
 item_window.title("Item Info (Trade Tool v1.0)")
 item_window.iconbitmap("TKinterTradeTool/tradetool.ico")
-item_window.geometry("685x970")
+item_window.geometry("750x970")
 
 
 
