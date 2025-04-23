@@ -159,44 +159,55 @@ def listing_convert_universal_dm(item):
 
 def offers_by_title(title, limit=20):
     base_url = "https://api.dmarket.com/exchange/v1/offers-by-title"
-    params = {
-        "Title": title,  # The item name on the market
-        "Limit": limit,
-        "order_by": "price",
-        "order_dir": "asc"
-    }
+    offset = 0
+    step = 20  # max allowed per page
+    exact_matches = []
 
-    # Generate the current timestamp
-    time_str = str(int(time.time()))
+    while len(exact_matches) < limit:
+        params = {
+            "Title": title,
+            "Limit": step,
+            "Offset": offset,
+            "order_by": "price",
+            "order_dir": "asc"
+        }
 
-    # Construct the query string from params
-    query_string = "&".join(f"{key}={value}" for key, value in params.items())
-    route_with_query = f"/exchange/v1/offers-by-title?{query_string}"
+        # Generate timestamp and signature
+        time_str = str(int(time.time()))
+        query_string = "&".join(f"{key}={value}" for key, value in params.items())
+        route_with_query = f"/exchange/v1/offers-by-title?{query_string}"
+        string_to_sign = f"GET{route_with_query}{time_str}"
+        encoded = string_to_sign.encode("utf-8")
+        signature_bytes = crypto_sign(encoded, secret_bytes)
+        signature = signature_bytes[:64].hex()
 
-    # Construct the unsigned string including params
-    string_to_sign = f"GET{route_with_query}{time_str}"
-    encoded = string_to_sign.encode('utf-8')
+        headers = {
+            "X-Api-Key": public_key,
+            "X-Sign-Date": time_str,
+            "X-Request-Sign": signature_prefix + signature
+        }
 
-    # Sign the string
-    signature_bytes = crypto_sign(encoded, secret_bytes)
-    signature = signature_bytes[:64].hex()
+        response = requests.get(base_url, headers=headers, params=params)
 
-    # Headers with the signature
-    headers = {
-        "X-Api-Key": public_key,
-        "X-Sign-Date": time_str,
-        "X-Request-Sign": signature_prefix + signature
-    }
+        if response.status_code != 200:
+            raise Exception(f"Request failed: {response.status_code} {response.text}")
 
-    # Make the API request
-    response = requests.get(base_url, headers=headers, params=params)
+        data = response.json()["objects"]
 
-    # Check if the request is successful
-    if response.status_code != 200:
-        raise Exception(f"Request failed: {response.status_code} {response.text}")
+        if not data:
+            break  # No more results
 
-    # Return the JSON response
-    return response.json()["objects"]
+        # Filter for exact matches
+        for item in data:
+            if item["title"] == title:
+                exact_matches.append(item)
+                if len(exact_matches) >= limit:
+                    break
+
+        offset += step
+
+    return exact_matches[:limit]
+
 
 def get_aggregated_prices(titles):
     """
@@ -574,3 +585,4 @@ def get_user_offers(
     return response.json()
 
 
+offers_by_title("Desert Eagle | Blaze (Factory New)")
