@@ -1,4 +1,4 @@
-from keys import secret_key, public_key
+from keys import secret_key_dm as secret_key, public_key_dm as public_key
 import requests
 import time
 from nacl.bindings import crypto_sign

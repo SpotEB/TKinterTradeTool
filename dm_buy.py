@@ -3,7 +3,7 @@ from datetime import datetime
 from nacl.signing import SigningKey
 from nacl.bindings import crypto_sign
 import requests
-from keys import public_key, secret_key
+from keys import secret_key_dm as secret_key, public_key_dm as public_key
 
 import threading
 import time
