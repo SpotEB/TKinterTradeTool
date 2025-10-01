@@ -12,12 +12,13 @@ from datetime import datetime, timezone
 from dm_csf_combo_methods import filtered_inventory, all_listings_universal as filtered_listings
 import os
 from datetime import datetime, timedelta, UTC
+import threading
 
 def offers_sorted(offers):
     offers.sort(key=lambda x: x["price"])
     return offers
 
-CACHE_PATH_FEES = "TKinterTradeTool/db/reduced_fees.json"
+CACHE_PATH_FEES = "db/reduced_fees.json"
 
 def reduced_fees_fetch():
     """Fetch from API and cache to file"""
@@ -65,7 +66,7 @@ ctk.set_default_color_theme("blue")  # Themes: "blue" (default), "green", "dark-
 app = ctk.CTk()  # Create the main window
 app.geometry("1000x1080")  # Set size
 app.title("Trade Tool v1.0")  # Set title
-app.iconbitmap("TKinterTradeTool/tradetool.ico")  # Set icon
+app.iconbitmap("tradetool.ico")  # Set icon
 
 tabview = ctk.CTkTabview(app, width=1000, height=1040)
 tabview.pack(padx=5, pady=5)
@@ -73,6 +74,7 @@ tabview.pack(padx=5, pady=5)
 tabview.add("Sell")  # add tab at the end
 tabview.add("Buy")  # add tab at the end
 tabview.add("Listings")
+tabview.add("Quick Sell")
 tabview.set("Sell")  # set currently visible tab
 
 tab_listings_loaded = False
@@ -126,6 +128,9 @@ scroll_frame_sell.grid(row=2, column=0, padx=20, pady=20)
 scroll_frame_listings = ctk.CTkScrollableFrame(tabview.tab("Listings"), width=950, height=900)
 scroll_frame_listings.grid(row=2, column=0, padx=20, pady=20)
 
+scroll_frame_quick_sell = ctk.CTkScrollableFrame(tabview.tab("Quick Sell"), width=950, height=900)
+scroll_frame_quick_sell.grid(row=1, column=0, padx=20, pady=20)
+
 def clear_tab(tab):
     for widget in tab.winfo_children():
         widget.destroy()
@@ -177,7 +182,7 @@ def create_pending_listing_window():
     pending_listing_window = ctk.CTkToplevel(app)
     pending_listing_window.title("Pending Listings")
     pending_listing_window.geometry("350x400")
-    pending_listing_window.iconbitmap("TKinterTradeTool/tradetool.ico")
+    pending_listing_window.iconbitmap("tradetool.ico")
     pending_listing_window.protocol("WM_DELETE_WINDOW", on_close)
 
     # Scrollable area for listings (store in global)
@@ -208,8 +213,17 @@ def create_pending_listing_window():
     cancel_btn.pack(side="left", padx=10)
 
 
+def handle_listing(item, price, confirmation_window):
+    # Call the API (in background thread)
+    response = csf_list_item(item["asset_id_csf"], int(float(price) * 100))
 
-        
+    # Safely update UI on main thread
+    app.after(0, lambda: finalize_listing(item, confirmation_window))
+
+def finalize_listing(item, confirmation_window):
+    confirmation_window.destroy()
+    inventory.remove(item)
+    update_button_sold(item)
 
 def list_item_confirm(item, price, market):
     if price == "":
@@ -224,17 +238,13 @@ def list_item_confirm(item, price, market):
             font=("Arial", 15)
         )
         confirmation_label.pack(padx=10, pady=10)
-        print(item["asset_id_csf"])
-        print(price)
+
         confirm_button = ctk.CTkButton(
             confirmation_window,
             text="Confirm",
-            command=lambda: (
-                csf_list_item(item["asset_id_csf"], int(float(price) * 100)),
-                confirmation_window.destroy(),
-                inventory.remove(item),
-                update_button_sold(item),
-            )
+            command=lambda: threading.Thread(
+                target=handle_listing, args=(item, price, confirmation_window)
+            ).start()
         )
         confirm_button.pack(padx=10, pady=10)
 
@@ -347,7 +357,7 @@ def item_call_sell(item):
         item_image_label.configure(image=ctk.CTkImage(light_image=loaded_image, dark_image=loaded_image, size=(256, 192)))
     except Exception as e: # If it fails, load a placeholder image
         print(f"Failed to load image: {e}")
-        placeholder_image = Image.open("TKinterTradeTool/db/placeholder_icon.webp").resize((256, 192))
+        placeholder_image = Image.open("db/placeholder_icon.webp").resize((256, 192))
         item_image_label.configure(image=ctk.CTkImage(light_image=placeholder_image, size=(256, 192)))
 
     clear_tab(item_last_sales_tabview.tab("CSfloat"))
@@ -446,7 +456,7 @@ Item listed: {datetime.fromtimestamp(int(item["listing_time"]), tz=timezone.utc)
         item_image_label.configure(image=ctk.CTkImage(light_image=loaded_image, dark_image=loaded_image, size=(256, 192)))
     except Exception as e: # If it fails, load a placeholder image
         print(f"Failed to load image: {e}")
-        placeholder_image = Image.open("TKinterTradeTool/db/placeholder_icon.webp").resize((256, 192))
+        placeholder_image = Image.open("db/placeholder_icon.webp").resize((256, 192))
         item_image_label.configure(image=ctk.CTkImage(light_image=placeholder_image, size=(256, 192)))
 
     clear_tab(item_last_sales_tabview.tab("CSfloat"))
@@ -510,6 +520,7 @@ Item listed: {datetime.fromtimestamp(int(item["listing_time"]), tz=timezone.utc)
 
 button_refs_sell = {}  # Holds references to sell buttons
 button_refs_listings = {}  # Holds references to listings buttons
+button_refs_quick_sell = {}  # Holds references to quick sell buttons
 
 def item_gen_button_sell(item_list):
     for widget in scroll_frame_sell.winfo_children():
@@ -574,6 +585,50 @@ def update_button_listing(item):
     if button:
         button.configure(fg_color="gray", state="disabled")
 
+def item_gen_button_quick_sell(item_list):
+    for widget in scroll_frame_quick_sell.winfo_children():
+        widget.destroy()
+
+    button_refs_quick_sell.clear()
+
+    for i, item in enumerate(item_list):
+        if item["stickers"] == [] and item["keychain"] == "":
+            unique_key = f"{item['asset_id_dm']}_{item['asset_id_csf']}"
+            item_text = f"{item['market_hash_name']} | {str(item['float_value'])[:6]} |"
+            button = ctk.CTkButton(scroll_frame_quick_sell,
+                                text=item_text,
+                                font=("Arial", 15),
+                                compound="left",
+                                width=600,
+                                height=20,
+                                anchor="w",
+                                fg_color="#1f6aa5",
+                                text_color="white",
+                                corner_radius=0,
+                                command=lambda item=item: toggle_button_selection(item))
+            button.grid(row=i + 1, column=0, padx=20, pady=0, sticky="w")
+
+            button_refs_quick_sell[unique_key] = button
+
+quick_sell_list = []
+default_color = "#1f6aa5"
+selected_color = "blue"
+
+def toggle_button_selection(item):
+    unique_key = f"{item['asset_id_dm']}_{item['asset_id_csf']}"
+    button = button_refs_quick_sell.get(unique_key)
+
+    if button:
+        if item in quick_sell_list:
+            # Deselect
+            quick_sell_list.remove(item)
+            button.configure(fg_color=default_color)
+        else:
+            # Select
+            quick_sell_list.append(item)
+            button.configure(fg_color=selected_color)
+
+
 
 app.grid_columnconfigure(0, weight=1)  # Entry expands
 app.grid_columnconfigure(1, weight=0)  # Button stays fixed
@@ -582,7 +637,7 @@ app.grid_rowconfigure(1, weight=1)  # Scrollable frame expands
 
 item_window = ctk.CTkToplevel(app)
 item_window.title("Item Info (Trade Tool v1.0)")
-item_window.iconbitmap("TKinterTradeTool/tradetool.ico")
+item_window.iconbitmap("tradetool.ico")
 item_window.geometry("750x970")
 
 
@@ -663,12 +718,12 @@ item_current_listings_tabview.set("CSfloat")  # set currently visible tab
 
 
 
-item_image = ctk.CTkImage(light_image=Image.open("TKinterTradeTool/db/placeholder_icon.webp"), dark_image=Image.open("TKinterTradeTool/db/placeholder_icon.webp"), size=(256, 192))
+item_image = ctk.CTkImage(light_image=Image.open("db/placeholder_icon.webp"), dark_image=Image.open("db/placeholder_icon.webp"), size=(256, 192))
 item_image_label = ctk.CTkLabel(item_info_frame, image=item_image, text="")
 item_image_label.grid(row=2, column=1, padx=10, pady=10, sticky="w")  # Added sticky="w"
 
 item_gen_button_sell(inventory)
 item_gen_button_listings(user_listings)
-
+item_gen_button_quick_sell(inventory)
 
 app.mainloop()

@@ -3,3 +3,8 @@ db/reduced_fees.json
 db/filtered_final.json
 db/filtered_final.json
 db/reduced_fees.json
+/__pycache__
+db/filtered_final.json
+db/merged_inventory.json
+db/merged_inventory.json
+db/filtered_final.json

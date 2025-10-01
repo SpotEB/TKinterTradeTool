@@ -53,7 +53,7 @@ def filtered_inventory():
 
 
 
-    json.dump(filtered_final, open("TKinterTradeTool/db/filtered_final.json", "w"), indent=4)
+    json.dump(filtered_final, open("db/filtered_final.json", "w"), indent=4)
     return filtered_final
 
 def filtered_listings():
@@ -115,9 +115,11 @@ def parse_csfloat_to_universal(listing):
     item = listing["item"]
     stickers = []
     for s in item.get("stickers", []):
+        print(s)
         stickers.append({
             "name": s.get("name", ""),
-            "price": s["reference"].get("price", 0),
+            "price": s.get("reference", {}).get("price", 0),
+
             # "slot": s.get("slot", 0),
             # "icon_url": s.get("icon_url", "")
         })
@@ -157,7 +159,7 @@ def all_listings_universal():
         dmarket_listings.append(parse_dmarket_to_universal(item))
     
     all_listings = csfloat_listings + dmarket_listings
-    # json.dump(all_listings, open("TKinterTradeTool/db/all_listings.json", "w"), indent=4)
+    # json.dump(all_listings, open("db/all_listings.json", "w"), indent=4)
     return all_listings
 
 # all_listings_universal()
